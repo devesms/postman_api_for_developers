@@ -1,0 +1,1870 @@
+{
+	"info": {
+		"_postman_id": "bb5510b5-d1b0-49ee-8c94-ce718d5e5d0e",
+		"name": "Api for Developers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Gửi tin",
+			"item": [
+				{
+					"name": "Tin OTP/chăm sóc khách hàng",
+					"id": "850974b9-12cf-46f5-946c-e8e15aa3585b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"Content\": \"{{Content}}\",\r\n   \"Phone\": \"{{Phone}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"Brandname\": \"{{Brandname}}\",\r\n   \"SmsType\": \"2\",\r\n   \"IsUnicode\": {{IsUnicode}},\r\n   \"Sandbox\": {{Sandbox}},\r\n   \"campaignid\": \"{{campaignid}}\",\r\n   \"RequestId\": \"{{RequestId}}\",\r\n   \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n   \"SendDate\":{{SendDate}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin cố định giá rẻ",
+					"id": "562c21f1-e073-4352-8a24-eac62657953b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"Content\": \"{{Content}}\",\r\n   \"Phone\": \"{{Phone}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"SmsType\": \"8\",\r\n   \"IsUnicode\": {{IsUnicode}},\r\n   \"Sandbox\": {{Sandbox}},\r\n   \"campaignid\": \"{{campaignid}}\",\r\n   \"RequestId\": \"{{RequestId}}\",\r\n   \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n   \"SendDate\":{{SendDate}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin quảng cáo",
+					"id": "001e2636-af74-42d3-b25a-173b1dd1faed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=nnkmnp1hqg4qiy2ar5x4owjq"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{SecretKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Brandname\":\"{{Brandname}}\",\r\n    \"Content\":\"{{Content}}\", \r\n    \"Phones\":[ \"{{Phones}}\",\"{{Phones}}\",\"{{Phones}}\"],\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SmsType\":\"1\",\r\n    \"SendDate\":{{SendDate}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin mutichanel: ZNS => SMS OTP/CSKH",
+					"id": "621e424e-1e47-4215-8d8a-21ef56f017b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=mhcur4ewhxeqmqv1jj2qsb23"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\"param1\",\"param2\",\"param3\"],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\":\"{{RequestId}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZNS mỗi khách hàng một nội dung",
+					"id": "1f75d02b-c622-4de4-aedc-dd9d4c2b16ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"TempID\": \"{{TempID}}\",\r\n\"Data\": [\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"value1\",\"value2\",\"value3\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"value1\",\"value2\",\"value3\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"value1\",\"value2\",\"value3\"]}\r\n],\r\n\"SendDate\":\"{{SendDate}}\",\r\n\"OAID\":\"{{OAID}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo OTT",
+					"id": "2d996c73-a5c2-45ca-973e-d18aabb960c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=t4fvukdmjjn2bqytjdgqvkks"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZaloOTT Tư vấn",
+					"id": "c0e00f1f-0c1f-4be1-8aac-f730d14e0e29",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"text\": \"{{text}}\",\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"payload\": {\r\n                                \"url\": \"{{url}}\"\r\n                            },\r\n                            \"type\": \"oa.open.url\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.query.show\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.query.hide\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.sms\",\r\n                            \"payload\": {\r\n                                \"content\": \"{{content}}\",\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.phone\",\r\n                            \"payload\": {\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZaloOTT Giao dịch",
+					"id": "eb8ca6b8-796c-463e-95b7-3601c8f49b33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":0,\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"{{template_type}}\",\r\n                    \"language\": \"{{language}}\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"image_url\": \"{{image_url}}\",\r\n                            \"type\": \"banner\"\r\n                        },\r\n                        {\r\n                            \"type\": \"header\",\r\n                            \"content\": \"{{content}}\",\r\n                            \"align\": \"{{align}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"table\",\r\n                            \"content\": [\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"style\": \"{{style}}\",\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        }\r\n                    ],\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.open.url\",\r\n                            \"payload\": {\r\n                                \"url\": \"{{url}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.query.show\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.sms\",\r\n                            \"payload\": {\r\n                                \"content\": \"{{content}}\",\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        },\r\n                    \r\n                        {\r\n                        \"title\": \"{{title}}\",\r\n                        \"image_icon\": \"{{image_icon}}\",\r\n                        \"type\": \"oa.open.phone\",\r\n                        \"payload\": {\r\n                            \"phone_code\": \"{{phone_code}}\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V5_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZaloOTT dạng yêu cầu thông tin người dùng",
+					"id": "a8181709-4215-4375-bdb3-3e6c5a0a23c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"OAID\": \"{{OAID}}\",\r\n\"CallbackUrl\":\"{{CallbackURL}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{UserID}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"request_user_info\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"title\": \"{{Title}}\",\r\n                            \"subtitle\": \"{{Subtitle}}\",\r\n                            \"image_url\": \"{{ImageURL}}\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZNS JOURNEY",
+					"id": "bdf6fa30-e725-4347-bcfc-84d388f64674",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ApiKey\": \"{{APIKEY}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"Phone\": \"{{Phone}}\",\r\n\"Params\": [\"{{PARAM1}}\",\"{{PARAM2}}\",\"{{PARAM3}}\"],\r\n\"IsJourney\": true,\r\n\"OrderId\": \"{{ORDERID}}\",\r\n\"TempID\": \"{{TempID}}\",\r\n\"OAID\": \"{{OAID}}\",\r\n\"RequestId\": \"{{RequestId}}\",\r\n\"campaignid\": \"{{campaignid}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Viber OTT",
+					"id": "9a4ce369-8f02-43cb-9693-f2e9ab827af3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=4nga3iwpro5vka3xffydrsgq"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\"{{Phone}}\"],\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\",\r\n    \"SmsType\": \"23\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin gencode tự động SMS",
+					"id": "a3a8616e-f2bc-4ad4-8f41-b5affda6c85d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TimeAlive={{TimeAlive}}&NumCharOfCode={{NumCharOfCode}}&Brandname={{Brandname}}&Type=2&message={{Content}}&IsNumber={{IsNumber}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"SendMessageAutoGenCode_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "TimeAlive",
+									"value": "{{TimeAlive}}"
+								},
+								{
+									"key": "NumCharOfCode",
+									"value": "{{NumCharOfCode}}"
+								},
+								{
+									"key": "Brandname",
+									"value": "{{Brandname}}"
+								},
+								{
+									"key": "Type",
+									"value": "2"
+								},
+								{
+									"key": "message",
+									"value": "{{Content}}"
+								},
+								{
+									"key": "IsNumber",
+									"value": "{{IsNumber}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin gencode tự động multichanel: ZNS -> SMS",
+					"id": "3ccbb0ef-9dec-4574-96db-397674952f88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"Phone\": \"{{Phone}}\",\r\n \"TimeAlive\": \"{{TimeAlive}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"MultiChannelTempId\": \"{{MultiChannelTempId}}\",\r\n \"TypeId\":\"{{TypeId}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V5"
+					},
+					"response": []
+				}
+			],
+			"id": "e83e4c6f-df95-4d3d-b687-6b3234eeb90d"
+		},
+		{
+			"name": "Gửi tin mở rộng",
+			"item": [
+				{
+					"name": "Tin chăm sóc khách hàng",
+					"id": "df0d691e-6423-490b-b75e-d9df2d961615",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
+							}
+						],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&Brandname={{Brandname}}&SmsType=2&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"SendMultipleMessage_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "IsUnicode",
+									"value": "{{IsUnicode}}"
+								},
+								{
+									"key": "Brandname",
+									"value": "{{Brandname}}"
+								},
+								{
+									"key": "SmsType",
+									"value": "2"
+								},
+								{
+									"key": "CallbackUrl",
+									"value": "{{CallbackUrl}}"
+								},
+								{
+									"key": "RequestId",
+									"value": "{{RequestId}}"
+								},
+								{
+									"key": "SendDate",
+									"value": "{{yyyy-mm-dd HH:mm:hh}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin chăm sóc khách hàng dạng POST X-Form",
+					"id": "d0936c00-3665-46cd-a2f2-a2e8ed03d357",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"type": "text",
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"type": "text",
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"type": "text",
+									"key": "Apikey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"type": "text",
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"type": "text",
+									"key": "SmsType",
+									"value": "2"
+								},
+								{
+									"type": "text",
+									"key": "Brandname",
+									"value": "{{Brandname}}"
+								}
+							]
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin chăm sóc khách hàng dạng POST TEXT",
+					"id": "4d90dee5-8611-4efb-93ee-93841422b035",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<RQST>\r\n<APIKEY><{{ApiKey}}</APIKEY>\r\n<SECRETKEY>{{SecretKey}}</SECRETKEY>\r\n<CONTENT>{{Content}}</CONTENT>\r\n<SMSTYPE>2</SMSTYPE>\r\n<BRANDNAME>{{Brandname}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{Phone}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin cố định giá rẻ",
+					"id": "feb8d155-6be2-4b3f-ba28-8a7a0923ec12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&SmsType=8&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"SendMultipleMessage_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "IsUnicode",
+									"value": "{{IsUnicode}}"
+								},
+								{
+									"key": "SmsType",
+									"value": "8"
+								},
+								{
+									"key": "CallbackUrl",
+									"value": "{{CallbackUrl}}"
+								},
+								{
+									"key": "RequestId",
+									"value": "{{RequestId}}"
+								},
+								{
+									"key": "SendDate",
+									"value": "{{yyyy-mm-dd HH:mm:hh}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Quảng cáo dạng POST TEXT",
+					"id": "437b79f9-8858-4715-a414-ef519dfb5c1d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<RQST>\r\n<APIKEY>{{APIKEY}}</APIKEY>\r\n<SECRETKEY>{{SECRETKEY}}</SECRETKEY>\r\n<CONTENT>{{CONTENT}}</CONTENT>\r\n<SMSTYPE>1</SMSTYPE>\r\n<BRANDNAME>{{BRANDNAME}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZNS dạng X-Form",
+					"id": "671c05c7-b5b2-4a00-9aa8-45ae6d84ff4c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"type": "text",
+									"key": "Apikey",
+									"value": "{{Apikey}}"
+								},
+								{
+									"type": "text",
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"type": "text",
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"type": "text",
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"type": "text",
+									"key": "Smstype",
+									"value": "{{Smstype}}"
+								},
+								{
+									"type": "text",
+									"key": "OAID",
+									"value": "{{OAID}}"
+								}
+							]
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZNS không truyền keyname",
+					"id": "0f331c88-ba4b-415c-8683-33cd83e38427",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=hv0fnv0mv4i0qnmx2zrxetvf"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ApiKey\":\"{{ApiKey}}\",\r\n\"SecretKey\":\"{{SecretKey}}\",\r\n\"Phone\":\"{{Phone}}\",\r\n\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"],\r\n\"TempID\":\"{{TempID}}\",\r\n\"OAID\":\"{{OAID}}\",\r\n\"SendDate\":\"{{SendDate}}\",\r\n\"Sandbox\":\"0\",\r\n\"RequestId\": \"{{RequestId}}\",\r\n\"campaignid\": \"{{campaignid}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin ZaloOTT dạng fullcontent",
+					"id": "3f4b7273-ece1-4f8c-9a13-209a92a8e4be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"{{SmsType}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"1\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Viber OTT",
+					"id": "f0978d1a-555b-4cf0-95fe-0b88a2f17ea0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=hv0fnv0mv4i0qnmx2zrxetvf"
+							}
+						],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?SmsType=23&OTTUrl={{OTTUrl}}&OTTImgUrl={{OTTImgUrl}}&Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Brandname={{Brandname}}&OTTLabel={{OTTLabel}}&CallbackUrl={{CallbackUrl}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"SendMultipleMessage_V4_get"
+							],
+							"query": [
+								{
+									"key": "SmsType",
+									"value": "23"
+								},
+								{
+									"key": "OTTUrl",
+									"value": "{{OTTUrl}}"
+								},
+								{
+									"key": "OTTImgUrl",
+									"value": "{{OTTImgUrl}}"
+								},
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "Brandname",
+									"value": "{{Brandname}}"
+								},
+								{
+									"key": "OTTLabel",
+									"value": "{{OTTLabel}}"
+								},
+								{
+									"key": "CallbackUrl",
+									"value": "{{CallbackUrl}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "5fc25b6c-3b60-4b5b-81f1-a36fd301db90",
+			"description": "# 🚀 Get started here\n\nThis collection guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this collection**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these request types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT and PATCH requests.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a variable called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more scripts in \"Tests\" to verify if the API works as expected and execute flows.\n    \n\n## ℹ️ Resources\n\n[Building requests](https://learning.postman.com/docs/sending-requests/requests/)  \n[Authorizing requests](https://learning.postman.com/docs/sending-requests/authorization/)  \n[Using variables](https://learning.postman.com/docs/sending-requests/variables/)  \n[Managing environments](https://learning.postman.com/docs/sending-requests/managing-environments/)  \n[Writing scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/)"
+		},
+		{
+			"name": "Mẫu callback",
+			"item": [
+				{
+					"name": "Tin chăm sóc khách hàng",
+					"id": "20f85e1f-3d9e-4ff4-bc4f-8d9c9edbc88a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://yourportal.sms/receivecallback/?SMSID=dc712784-9c5f-4c69-b9a8-ea69d56adc9a87&SendFailed=2&SendStatus=5&SendSuccess=0&TotalPrice=0.0000&TotalReceiver=2&TotalSent=2&RequestId=&TypeId=2&telcoid=1&phonenumber=0397840416&switchsmsid=",
+							"protocol": "https",
+							"host": [
+								"yourportal",
+								"sms"
+							],
+							"path": [
+								"receivecallback",
+								""
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "dc712784-9c5f-4c69-b9a8-ea69d56adc9a87"
+								},
+								{
+									"key": "SendFailed",
+									"value": "2"
+								},
+								{
+									"key": "SendStatus",
+									"value": "5"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "0"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "0.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "2"
+								},
+								{
+									"key": "TotalSent",
+									"value": "2"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "2"
+								},
+								{
+									"key": "telcoid",
+									"value": "1"
+								},
+								{
+									"key": "phonenumber",
+									"value": "0397840416"
+								},
+								{
+									"key": "switchsmsid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Quảng cáo",
+					"id": "eeaca8c5-ef65-4fed-ac2e-697d0360327b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://yourportal.sms/receivecallback/?SMSID=82b0bb8aed914a0aab8deba567c9b8c2&SendFailed=0&SendStatus=5&SendSuccess=0&TotalPrice=696987.0000&TotalReceiver=169&TotalSent=169&RequestId=&TypeId=1",
+							"protocol": "https",
+							"host": [
+								"yourportal",
+								"sms"
+							],
+							"path": [
+								"receivecallback",
+								""
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "82b0bb8aed914a0aab8deba567c9b8c2"
+								},
+								{
+									"key": "SendFailed",
+									"value": "0"
+								},
+								{
+									"key": "SendStatus",
+									"value": "5"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "0"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "696987.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "169"
+								},
+								{
+									"key": "TotalSent",
+									"value": "169"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo OTT",
+					"id": "b98ca55e-3001-4446-b5bb-a4ab86127b0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://yourportal.sms/receivecallback/?SMSID=f66545d2-c7e2-4603-984e-d2238c363c8292&SendFailed=1&SendStatus=5&SendSuccess=0&TotalPrice=0.0000&TotalReceiver=1&TotalSent=0&RequestId=&TypeId=25&telcoid=2&phonenumber=0901888484&partnerids=&error_info=\"{\\\"error\\\":-114,\\\"message\\\":\\\"User is inactive, or reject the message, or using an outdated Zalo version, or other internal errors\\\"}\"&oaid=1397492183140006179&tempid=2056446",
+							"protocol": "https",
+							"host": [
+								"yourportal",
+								"sms"
+							],
+							"path": [
+								"receivecallback",
+								""
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "f66545d2-c7e2-4603-984e-d2238c363c8292"
+								},
+								{
+									"key": "SendFailed",
+									"value": "1"
+								},
+								{
+									"key": "SendStatus",
+									"value": "5"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "0"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "0.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "1"
+								},
+								{
+									"key": "TotalSent",
+									"value": "0"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "25"
+								},
+								{
+									"key": "telcoid",
+									"value": "2"
+								},
+								{
+									"key": "phonenumber",
+									"value": "0901888484"
+								},
+								{
+									"key": "partnerids",
+									"value": ""
+								},
+								{
+									"key": "error_info",
+									"value": "\"{\\\"error\\\":-114,\\\"message\\\":\\\"User is inactive, or reject the message, or using an outdated Zalo version, or other internal errors\\\"}\""
+								},
+								{
+									"key": "oaid",
+									"value": "1397492183140006179"
+								},
+								{
+									"key": "tempid",
+									"value": "2056446"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "97dc89c5-cc40-4a4d-a064-15c0e53aa460"
+		},
+		{
+			"name": "Truy xuất  và đăng ký thông tin",
+			"item": [
+				{
+					"name": "Lấy thông tin số dư tài khoản",
+					"id": "571b0b39-3ce0-4102-817c-132beb05c7d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=owevtxyrtqm5gvj5zwjfeb2z"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ApiKey\":\"{{ApiKey}}\",\r\n\"SecretKey\":\"{{SecretKey}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/GetBalance_json"
+					},
+					"response": []
+				},
+				{
+					"name": "Check code tin Gencode",
+					"id": "5e58c22f-dd3e-4dfd-8921-f794bf1873f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
+							}
+						],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Code={{Code}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"CheckCodeGen_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "Code",
+									"value": "{{Code}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra trạng thái tin nhắn theo khoảng thời gian",
+					"id": "282f1bec-d093-4c68-8f99-f4d25024e9f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"SmsType\":{{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\":\"{{DateTo}}\",\r\n    \"Page\":{{Page}},\r\n    \"PageSize\":{{PageSize}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra tin nhắn theo SMSID",
+					"id": "17b5d3c2-11b8-4748-ad0a-442a42d43532",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetSendStatus"
+							],
+							"query": [
+								{
+									"key": "RefId",
+									"value": "{{SMSID}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra chi tiết từng số trong tin nhắn",
+					"id": "1c1433bf-69be-4882-87d4-dd0c686f565c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetSmsReceiverStatus_get"
+							],
+							"query": [
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "RefId",
+									"value": "{{SMSID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách brandname đang active của tài khoản",
+					"id": "3133a801-03e9-4e81-8de1-ac27549fb966",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://rest.esms.vn/MainService.svc/json/GetListBrandname/{{ApiKey}}/{{SecretKey}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách template chăm sóc khách hàng",
+					"id": "ca4176c1-a1af-4d93-bf29-81cd9dc3a85c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=owevtxyrtqm5gvj5zwjfeb2z"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\",\r\n \"SmsType\":\"2\",\r\n \"Brandname\":\"{{Brandname}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/GetTemplate/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin CSKH",
+					"id": "b80773ed-fabf-49ee-bb78-c5eefe447d74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=hxev0olj4ur555cahsba5lso"
+							}
+						],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"SummaryMultipleMessage_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "SmsType",
+									"value": "2"
+								},
+								{
+									"key": "BrandName",
+									"value": "{{BrandName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin Quảng cáo",
+					"id": "938df6e6-b2fb-45b0-a036-2852f508cf74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=hxev0olj4ur555cahsba5lso"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<RQST>\r\n<APIKEY>{{APIKEY}}</APIKEY>\r\n<SECRETKEY>{{SECRETKEY}}</SECRETKEY>\r\n<CONTENT>{{CONTENT}}</CONTENT>\r\n<SMSTYPE>1</SMSTYPE>\r\n<BRANDNAME>{{BRANDNAME}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBrandname/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách OA Zalo có trong tài khoản",
+					"id": "cb86e533-d5cc-40cd-844f-465c8cb8dc38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách template ZNS theo OAID",
+					"id": "d201e3b3-5f46-4db7-b829-2b730a29b6b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=x04tc1ao4ggn2g5nghk25ogr"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ApiKey\": \"{{ApiKey}}\",\r\n  \"SecretKey\": \"{{SecretKey}}\",\r\n  \"OAId\": \"{{OAId}}\",\r\n  \"SmsType\": \"{{SmsType}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin Zalo OTT",
+					"id": "a1b040da-0c02-4e53-b1da-c14e254a197d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=ghob0j1dr00pujmvzhk5w4nk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"Phone\": \"{{Phone}}\",\r\n \"Params\": [\"value1\",\"value2\",\"value3\"],\r\n \"TempID\": \"{{TempID}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy Qouta ZNS theo OAID",
+					"id": "f7a3f3f8-3bb2-4b53-af42-66afe6966a69",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=ghob0j1dr00pujmvzhk5w4nk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách đánh giá theo OAID và templateID",
+					"id": "c36498c6-2153-494c-9795-36c85330aa33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\":\"{{Offset}}\",\r\n    \"Limit\":\"{{Limit}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra chất lượng OA",
+					"id": "b03f9576-0e10-4061-bdd0-4cecc82ef6c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách Zalo Followers theo OAID",
+					"id": "eff6317f-9595-43ed-9950-102dc8b5c95e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=ghob0j1dr00pujmvzhk5w4nk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\",\r\n \"OAID\":\"{{OAID}}\",\r\n \"Offset\": {{Offset}},\r\n \"Count\": {{Count}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin callback tin Zalo OTT",
+					"id": "eb870a67-0f33-444d-85e5-bbabf920299d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
+						},
+						"url": "http://status-sms.esms.vn/ZaloCallback/GetCallback"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin chi tiết template Zalo OTT",
+					"id": "43e884e9-36a4-4272-94bd-c388551e7c60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo?TemplateId={{TemplateId}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&OAId={{OAId}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetZnsTemplateInfo"
+							],
+							"query": [
+								{
+									"key": "TemplateId",
+									"value": "{{TemplateId}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "OAId",
+									"value": "{{OAId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng ký mua gói OA",
+					"id": "f6fc7a5b-a326-4e4b-b7b1-0023151354f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Dateactive\":\"{{Dateactive}}\",\r\n    \"Duaration\":\"{{Duaration}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"Package\":{{Package}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/RegisOAPackageJson/"
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng ký template Zalo OTT",
+					"id": "f25701ff-8ce7-4c5d-bca6-c7eafd158977",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Content\":\"{{Content}}\",\r\n    \"ImageUrl\":\"{{ImageUrl}}\",\r\n    \"CTA1\":\"{{CTA1}}\",\r\n    \"CTA2\":\"{{CTA2}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"SmsType\":\"{{SmsType}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/"
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng ký template Chăm sóc khách hàng",
+					"id": "12f5e80f-025c-4c9c-9c9c-b42622ea8af2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"AssetsUrl\": \"{{AssetsUrl}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"{{IsUnicode}}\",\r\n    \"CustomerEmail\": \"{{CustomerEmail}}\",\r\n    \"CustomerName\": \"{{CustomerName}}\",\r\n    \"CustomerPhone\": \"{{CustomerPhone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ServiceType\": 2,\r\n    \"SmsType\": {{SmsType}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/"
+					},
+					"response": []
+				}
+			],
+			"id": "97f5f452-1e2e-4ef4-880d-a9236736f493"
+		},
+		{
+			"name": "Voice",
+			"item": [
+				{
+					"name": "Tạo  cuộc gọi voice OTP",
+					"id": "e3c40013-6201-498d-b581-a43ffbeb6de7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
+							},
+							{
+								"key": "X-API-Key",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"Content\": \"{{Content}}\",\r\n   \"Phone\": \"{{Phone}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"SmsType\": \"8\",\r\n   \"IsUnicode\": {{IsUnicode}},\r\n   \"Sandbox\": {{Sandbox}},\r\n   \"campaignid\": \"{{campaignid}}\",\r\n   \"RequestId\": \"{{RequestId}}\",\r\n   \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n   \"SendDate\":{{SendDate}}\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo cuộc gọi tự động theo Template",
+					"id": "9b15367f-ff51-4cf4-9769-455cbdcec284",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://voiceapi.esms.vn/MainService.svc/json/MakeCallTemplate_V2?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TemplateId={{TemplateId}}&Phone={{Phone}}&VariableListStr={{VariableListStr}}&SendDate={{SendDate}}&Voice={{Voice}}&Speed={{Speed}}&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}",
+							"protocol": "http",
+							"host": [
+								"voiceapi",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"MakeCallTemplate_V2"
+							],
+							"query": [
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "TemplateId",
+									"value": "{{TemplateId}}"
+								},
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "VariableListStr",
+									"value": "{{VariableListStr}}"
+								},
+								{
+									"key": "SendDate",
+									"value": "{{SendDate}}"
+								},
+								{
+									"key": "Voice",
+									"value": "{{Voice}}"
+								},
+								{
+									"key": "Speed",
+									"value": "{{Speed}}"
+								},
+								{
+									"key": "CallbackUrl",
+									"value": "{{CallbackUrl}}"
+								},
+								{
+									"key": "RequestId",
+									"value": "{{RequestId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo cuộc gọi tự động từ file ghi âm",
+					"id": "bd90912f-439a-4c8e-a741-914b7fc36cde",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://voiceapi.esms.vn/MainService.svc/json/MakeCallRecord_V2?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TemplateId={{RecordId}}&Phone={{Phone}}&SendDate={{SendDate}}&NumberForward={{NumberForward}}&MaxRepeat={{MaxRepeat}}&MaxRetry={{MaxRetry}}&Ivr={{Ivr}}&TimeWaitToIvr={{TimeWaitToIvr}}&WaitRetry={{WaitRetry}}&CallbackUrl={{CallbackUrl}}&RequestID={{RequestId}}",
+							"protocol": "http",
+							"host": [
+								"voiceapi",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"MakeCallRecord_V2"
+							],
+							"query": [
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "TemplateId",
+									"value": "{{RecordId}}"
+								},
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "SendDate",
+									"value": "{{SendDate}}"
+								},
+								{
+									"key": "NumberForward",
+									"value": "{{NumberForward}}"
+								},
+								{
+									"key": "MaxRepeat",
+									"value": "{{MaxRepeat}}"
+								},
+								{
+									"key": "MaxRetry",
+									"value": "{{MaxRetry}}"
+								},
+								{
+									"key": "Ivr",
+									"value": "{{Ivr}}"
+								},
+								{
+									"key": "TimeWaitToIvr",
+									"value": "{{TimeWaitToIvr}}"
+								},
+								{
+									"key": "WaitRetry",
+									"value": "{{WaitRetry}}"
+								},
+								{
+									"key": "CallbackUrl",
+									"value": "{{CallbackUrl}}"
+								},
+								{
+									"key": "RequestID",
+									"value": "{{RequestId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy trạng thái cuộc gọi",
+					"id": "92d7042b-06f1-41c4-85f8-91a1d976944d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=b31sfztncr4yoznoxr2dpve1"
+							}
+						],
+						"url": {
+							"raw": "http://voiceapi.esms.vn/MainService.svc/json/GetSendStatus?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&ReferenceId={{SMSID}}",
+							"protocol": "http",
+							"host": [
+								"voiceapi",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetSendStatus"
+							],
+							"query": [
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "ReferenceId",
+									"value": "{{SMSID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f8d106e3-878e-420a-89c3-066514f9478d"
+		}
+	]
+}
