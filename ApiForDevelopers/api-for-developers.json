@@ -124,7 +124,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"TempID\": \"{{TempID}}\",\r\n\"Data\": [\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"value1\",\"value2\",\"value3\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"value1\",\"value2\",\"value3\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"value1\",\"value2\",\"value3\"]}\r\n],\r\n\"SendDate\":\"{{SendDate}}\",\r\n\"OAID\":\"{{OAID}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}",
+							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"TempID\": \"{{TempID}}\",\r\n\"Data\": [\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"]}\r\n],\r\n\"SendDate\":\"{{SendDate}}\",\r\n\"OAID\":\"{{OAID}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
