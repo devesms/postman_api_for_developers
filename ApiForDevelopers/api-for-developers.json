@@ -42,10 +42,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
 							}
 						],
 						"body": {
@@ -68,10 +64,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=nnkmnp1hqg4qiy2ar5x4owjq"
 							}
 						],
 						"body": {
@@ -91,10 +83,6 @@
 					"request": {
 						"method": "POST",
 						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
 							{
 								"key": "Cookie",
 								"value": "ASP.NET_SessionId=t4fvukdmjjn2bqytjdgqvkks"
@@ -120,15 +108,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=mhcur4ewhxeqmqv1jj2qsb23"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\"param1\",\"param2\",\"param3\"],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\":\"{{RequestId}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\"{{param1}}\",\"{{param2}}\",\"{{param3}}\"],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\":\"{{RequestId}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/"
 					},
