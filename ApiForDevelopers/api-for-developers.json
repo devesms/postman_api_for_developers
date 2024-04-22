@@ -76,9 +76,35 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\":\"{{SecretKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Brandname\":\"{{Brandname}}\",\r\n    \"Content\":\"{{Content}}\", \r\n    \"Phones\":[ \"{{Phones}}\",\"{{Phones}}\",\"{{Phones}}\"],\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SmsType\":\"1\",\r\n    \"SendDate\":{{SendDate}}\r\n}"
+							"raw": "{\r\n    \"ApiKey\":\"{{SecretKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Brandname\":\"{{Brandname}}\",\r\n    \"Content\":\"{{Content}}\", \r\n    \"Phones\":[ \"{{Phones}}\",\"{{Phones}}\",\"{{Phones}}\"],\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SmsType\":\"1\",\r\n    \"SendDate\":\"{{SendDate}}\"\r\n}"
 						},
 						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo OTT",
+					"id": "2d996c73-a5c2-45ca-973e-d18aabb960c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=t4fvukdmjjn2bqytjdgqvkks"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
 					},
 					"response": []
 				},
@@ -127,32 +153,6 @@
 							}
 						},
 						"url": "http://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin Zalo OTT",
-					"id": "2d996c73-a5c2-45ca-973e-d18aabb960c7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=t4fvukdmjjn2bqytjdgqvkks"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
-						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
 					},
 					"response": []
 				},
