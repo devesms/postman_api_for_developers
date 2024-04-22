@@ -82,12 +82,7 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=t4fvukdmjjn2bqytjdgqvkks"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
