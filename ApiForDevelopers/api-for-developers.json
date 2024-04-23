@@ -354,10 +354,10 @@
 			"id": "e83e4c6f-df95-4d3d-b687-6b3234eeb90d"
 		},
 		{
-			"name": "Gửi tin mở rộng",
+			"name": "Các API khác",
 			"item": [
 				{
-					"name": "Tin chăm sóc khách hàng",
+					"name": "Gửi tin chăm sóc khách hàng dạng GET",
 					"id": "df0d691e-6423-490b-b75e-d9df2d961615",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -430,7 +430,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin chăm sóc khách hàng dạng POST X-Form",
+					"name": "Gửi tin chăm sóc khách hàng dạng POST X-Form",
 					"id": "d0936c00-3665-46cd-a2f2-a2e8ed03d357",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -483,7 +483,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin chăm sóc khách hàng dạng POST TEXT",
+					"name": "Gửi tin chăm sóc khách hàng dạng POST TEXT",
 					"id": "4d90dee5-8611-4efb-93ee-93841422b035",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
