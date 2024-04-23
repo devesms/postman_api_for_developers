@@ -997,6 +997,19 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Tin viber",
+					"id": "6acfe1fc-8601-4bce-9549-65bf17f279b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
 				}
 			],
 			"id": "97dc89c5-cc40-4a4d-a064-15c0e53aa460"
