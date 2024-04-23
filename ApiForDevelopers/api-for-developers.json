@@ -768,6 +768,50 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "API kiểm tra code gen tự động",
+					"id": "62b4ccfb-c812-44f3-9cf5-e8c5b99e7b06",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Phone={{{Phone}}&Code={{Code}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"CheckCodeGen_V4_get"
+							],
+							"query": [
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "Phone",
+									"value": "{{{Phone}}"
+								},
+								{
+									"key": "Code",
+									"value": "{{Code}}"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "5fc25b6c-3b60-4b5b-81f1-a36fd301db90",
