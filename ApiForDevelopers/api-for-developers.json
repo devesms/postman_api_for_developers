@@ -1023,6 +1023,19 @@
 						"url": ""
 					},
 					"response": []
+				},
+				{
+					"name": "Tin Zalo OTT giao dịch",
+					"id": "472bc96b-ae61-4c6d-a5fd-dad5e17c4b70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
 				}
 			],
 			"id": "97dc89c5-cc40-4a4d-a064-15c0e53aa460"
