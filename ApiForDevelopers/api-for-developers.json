@@ -31,7 +31,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin cố định giá rẻ",
+					"name": "Tin SMS cố định giá rẻ",
 					"id": "562c21f1-e073-4352-8a24-eac62657953b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -53,7 +53,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin quảng cáo",
+					"name": "Tin SMS quảng cáo",
 					"id": "001e2636-af74-42d3-b25a-173b1dd1faed",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -239,7 +239,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Viber OTT",
+					"name": "Tin Viber",
 					"id": "9a4ce369-8f02-43cb-9693-f2e9ab827af3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -514,7 +514,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin cố định giá rẻ",
+					"name": "Gửi tin cố định giá rẻ dạng GET",
 					"id": "feb8d155-6be2-4b3f-ba28-8a7a0923ec12",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -578,7 +578,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Quảng cáo dạng POST TEXT",
+					"name": "Gửi tin Quảng cáo dạng POST TEXT",
 					"id": "437b79f9-8858-4715-a414-ef519dfb5c1d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -600,7 +600,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin ZNS dạng X-Form",
+					"name": "Gửi tin ZNS dạng X-Form",
 					"id": "671c05c7-b5b2-4a00-9aa8-45ae6d84ff4c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -653,7 +653,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin ZNS không truyền keyname",
+					"name": "Gửi tin ZNS không truyền keyname",
 					"id": "0f331c88-ba4b-415c-8683-33cd83e38427",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -679,7 +679,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin ZaloOTT dạng fullcontent",
+					"name": "Gửi tin ZaloOTT dạng fullcontent",
 					"id": "3f4b7273-ece1-4f8c-9a13-209a92a8e4be",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -701,7 +701,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Viber OTT",
+					"name": "Gửi tin Viber dạng GET",
 					"id": "f0978d1a-555b-4cf0-95fe-0b88a2f17ea0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
