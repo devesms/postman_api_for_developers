@@ -254,7 +254,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\"{{Phone}}\"],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\",\r\n    \"SmsType\": \"23\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\"{{Phone}}\"],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
 						},
 						"url": "http://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
 					},
