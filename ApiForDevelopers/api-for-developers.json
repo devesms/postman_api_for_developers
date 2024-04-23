@@ -9,7 +9,7 @@
 			"name": "Gửi tin",
 			"item": [
 				{
-					"name": "Tin OTP/chăm sóc khách hàng",
+					"name": "Tin SMS OTP/chăm sóc khách hàng",
 					"id": "850974b9-12cf-46f5-946c-e8e15aa3585b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
