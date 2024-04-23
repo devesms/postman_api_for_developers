@@ -1729,7 +1729,7 @@
 							"mode": "raw",
 							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"Content\": \"{{Content}}\",\r\n   \"Phone\": \"{{Phone}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"SmsType\": \"8\",\r\n   \"IsUnicode\": {{IsUnicode}},\r\n   \"Sandbox\": {{Sandbox}},\r\n   \"campaignid\": \"{{campaignid}}\",\r\n   \"RequestId\": \"{{RequestId}}\",\r\n   \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n   \"SendDate\":\"{{SendDate}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
 					"response": []
 				},
