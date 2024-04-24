@@ -1810,7 +1810,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Content\":\"{{Content}}\",\r\n    \"ImageUrl\":\"{{ImageUrl}}\",\r\n    \"CTA1\":\"{{CTA1}}\",\r\n    \"CTA2\":\"{{CTA2}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"SmsType\":\"{{SmsType}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/"
+						"url": "https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/"
 					},
 					"response": []
 				},
