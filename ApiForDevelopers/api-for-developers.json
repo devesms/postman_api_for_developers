@@ -1832,7 +1832,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"AssetsUrl\": \"{{AssetsUrl}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"{{IsUnicode}}\",\r\n    \"CustomerEmail\": \"{{CustomerEmail}}\",\r\n    \"CustomerName\": \"{{CustomerName}}\",\r\n    \"CustomerPhone\": \"{{CustomerPhone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ServiceType\": 2,\r\n    \"SmsType\": {{SmsType}}\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/"
 					},
 					"response": []
 				},
