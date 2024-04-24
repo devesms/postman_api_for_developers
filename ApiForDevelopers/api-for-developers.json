@@ -1102,75 +1102,6 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://{{yourportalreceivecallback}}?SMSID=7d11c87a22934df390f73ec59d8defd6205&SendFailed=0&SendStatus=2&SendSuccess=0&TotalPrice=60.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=26&phonenumber=312158068343230&error_info=&oaid=4097311281936189049",
-							"protocol": "https",
-							"host": [
-								"{{yourportalreceivecallback}}"
-							],
-							"query": [
-								{
-									"key": "SMSID",
-									"value": "7d11c87a22934df390f73ec59d8defd6205"
-								},
-								{
-									"key": "SendFailed",
-									"value": "0"
-								},
-								{
-									"key": "SendStatus",
-									"value": "2"
-								},
-								{
-									"key": "SendSuccess",
-									"value": "0"
-								},
-								{
-									"key": "TotalPrice",
-									"value": "60.0000"
-								},
-								{
-									"key": "TotalReceiver",
-									"value": "1"
-								},
-								{
-									"key": "TotalSent",
-									"value": "1"
-								},
-								{
-									"key": "RequestId",
-									"value": ""
-								},
-								{
-									"key": "TypeId",
-									"value": "26"
-								},
-								{
-									"key": "phonenumber",
-									"value": "312158068343230"
-								},
-								{
-									"key": "error_info",
-									"value": ""
-								},
-								{
-									"key": "oaid",
-									"value": "4097311281936189049"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Tin Zalo OTT giao dịch",
-					"id": "472bc96b-ae61-4c6d-a5fd-dad5e17c4b70",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
 							"raw": "https://{{yourportalreceivecallback}}?SMSID=7d11c87a22934df390f73ec59d8defd6205&SendFailed=0&SendStatus=5&SendSuccess=1&TotalPrice=60.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=26&phonenumber=312158068343230&error_info=%7B%22data%22:%7B%22message_id%22:%22e1a60e8890be9de4c4ab%22,%22user_id%22:%2231215806834323092%22%7D,%22error%22:0,%22message%22:%22Success%22%7D____24/04/2024%2016:58:01&oaid=4097311281936189049&partnerids=e1a60e8890be9de4c4ab",
 							"protocol": "https",
 							"host": [
@@ -1228,6 +1159,79 @@
 								{
 									"key": "partnerids",
 									"value": "e1a60e8890be9de4c4ab"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo OTT giao dịch",
+					"id": "472bc96b-ae61-4c6d-a5fd-dad5e17c4b70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=11beff780e7043ad9c0c91297025479c214&SendFailed=0&SendStatus=5&SendSuccess=1&TotalPrice=215.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=28&phonenumber=312158068343230&error_info=%7B%22data%22:%7B%22message_id%22:%22f2682909b030bd6ae425%22,%22user_id%22:%2231215806834323092%22%7D,%22error%22:0,%22message%22:%22Success%22%7D____24/04/2024%2017:03:00&oaid=4097311281936189049&partnerids=f2682909b030bd6ae425",
+							"protocol": "https",
+							"host": [
+								"{{yourportalreceivecallback}}"
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "11beff780e7043ad9c0c91297025479c214"
+								},
+								{
+									"key": "SendFailed",
+									"value": "0"
+								},
+								{
+									"key": "SendStatus",
+									"value": "5"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "1"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "215.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "1"
+								},
+								{
+									"key": "TotalSent",
+									"value": "1"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "28"
+								},
+								{
+									"key": "phonenumber",
+									"value": "312158068343230"
+								},
+								{
+									"key": "error_info",
+									"value": "%7B%22data%22:%7B%22message_id%22:%22f2682909b030bd6ae425%22,%22user_id%22:%2231215806834323092%22%7D,%22error%22:0,%22message%22:%22Success%22%7D____24/04/2024%2017:03:00"
+								},
+								{
+									"key": "oaid",
+									"value": "4097311281936189049"
+								},
+								{
+									"key": "partnerids",
+									"value": "f2682909b030bd6ae425"
 								}
 							]
 						}
