@@ -1617,7 +1617,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy Qouta ZNS theo OAID",
+					"name": "Lấy Qouta tin ZaloOTT theo OAID",
 					"id": "f7a3f3f8-3bb2-4b53-af42-66afe6966a69",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1628,17 +1628,13 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=ghob0j1dr00pujmvzhk5w4nk"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
 					},
 					"response": []
 				},
