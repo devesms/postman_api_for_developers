@@ -1606,17 +1606,13 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=ghob0j1dr00pujmvzhk5w4nk"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"Phone\": \"{{Phone}}\",\r\n \"Params\": [\"value1\",\"value2\",\"value3\"],\r\n \"TempID\": \"{{TempID}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{value1}}\",\r\n        \"{{value2}}\",\r\n        \"{{value3}}\"\r\n    ],\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
 					},
 					"response": []
 				},
