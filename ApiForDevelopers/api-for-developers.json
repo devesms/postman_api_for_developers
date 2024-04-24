@@ -1249,10 +1249,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=owevtxyrtqm5gvj5zwjfeb2z"
 							}
 						],
 						"body": {
@@ -1278,8 +1274,8 @@
 							}
 						],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
