@@ -1788,7 +1788,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Dateactive\":\"{{Dateactive}}\",\r\n    \"Duaration\":\"{{Duaration}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"Package\":{{Package}}\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/RegisOAPackageJson/"
+						"url": "https://rest.esms.vn/MainService.svc/json/RegisOAPackageJson/"
 					},
 					"response": []
 				},
