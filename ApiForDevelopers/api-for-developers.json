@@ -1101,7 +1101,63 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=7d11c87a22934df390f73ec59d8defd6205&SendFailed=0&SendStatus=2&SendSuccess=0&TotalPrice=60.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=26&phonenumber=312158068343230&error_info=&oaid=4097311281936189049",
+							"protocol": "https",
+							"host": [
+								"{{yourportalreceivecallback}}"
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "7d11c87a22934df390f73ec59d8defd6205"
+								},
+								{
+									"key": "SendFailed",
+									"value": "0"
+								},
+								{
+									"key": "SendStatus",
+									"value": "2"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "0"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "60.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "1"
+								},
+								{
+									"key": "TotalSent",
+									"value": "1"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "26"
+								},
+								{
+									"key": "phonenumber",
+									"value": "312158068343230"
+								},
+								{
+									"key": "error_info",
+									"value": ""
+								},
+								{
+									"key": "oaid",
+									"value": "4097311281936189049"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -1382,10 +1438,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
 							}
 						],
 						"body": {
