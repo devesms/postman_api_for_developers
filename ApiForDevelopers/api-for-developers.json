@@ -1267,12 +1267,7 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=hxev0olj4ur555cahsba5lso"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}",
 							"protocol": "https",
@@ -1338,7 +1333,7 @@
 							"mode": "raw",
 							"raw": "<RQST>\r\n<APIKEY>{{APIKEY}}</APIKEY>\r\n<SECRETKEY>{{SECRETKEY}}</SECRETKEY>\r\n<CONTENT>{{CONTENT}}</CONTENT>\r\n<SMSTYPE>1</SMSTYPE>\r\n<BRANDNAME>{{BRANDNAME}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBrandname/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBrandname/"
 					},
 					"response": []
 				},
