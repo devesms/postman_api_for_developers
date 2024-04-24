@@ -1247,7 +1247,67 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=53dbbc6e816f4159a9035a14a787e08f172&SendFailed=0&SendStatus=5&SendSuccess=1&TotalPrice=60.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=26&phonenumber=312158068343230&error_info=%7B%22data%22:%7B%22message_id%22:%22f405841b5f2352790b36%22,%22user_id%22:%2231215806834323092%22%7D,%22error%22:0,%22message%22:%22Success%22%7D____24/04/2024%2017:07:01&oaid=4097311281936189049&partnerids=f405841b5f2352790b36",
+							"protocol": "https",
+							"host": [
+								"{{yourportalreceivecallback}}"
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "53dbbc6e816f4159a9035a14a787e08f172"
+								},
+								{
+									"key": "SendFailed",
+									"value": "0"
+								},
+								{
+									"key": "SendStatus",
+									"value": "5"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "1"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "60.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "1"
+								},
+								{
+									"key": "TotalSent",
+									"value": "1"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "26"
+								},
+								{
+									"key": "phonenumber",
+									"value": "312158068343230"
+								},
+								{
+									"key": "error_info",
+									"value": "%7B%22data%22:%7B%22message_id%22:%22f405841b5f2352790b36%22,%22user_id%22:%2231215806834323092%22%7D,%22error%22:0,%22message%22:%22Success%22%7D____24/04/2024%2017:07:01"
+								},
+								{
+									"key": "oaid",
+									"value": "4097311281936189049"
+								},
+								{
+									"key": "partnerids",
+									"value": "f405841b5f2352790b36"
+								}
+							]
+						}
 					},
 					"response": []
 				}
