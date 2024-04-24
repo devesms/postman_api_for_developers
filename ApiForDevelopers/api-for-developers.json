@@ -1323,10 +1323,6 @@
 							{
 								"key": "Content-Type",
 								"value": "text/plain"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=hxev0olj4ur555cahsba5lso"
 							}
 						],
 						"body": {
