@@ -1355,7 +1355,7 @@
 							"mode": "raw",
 							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/"
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/"
 					},
 					"response": []
 				},
