@@ -1112,66 +1112,13 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=owevtxyrtqm5gvj5zwjfeb2z"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n\"ApiKey\":\"{{ApiKey}}\",\r\n\"SecretKey\":\"{{SecretKey}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/GetBalance_json"
-					},
-					"response": []
-				},
-				{
-					"name": "Check code tin Gencode",
-					"id": "5e58c22f-dd3e-4dfd-8921-f794bf1873f5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
-							}
-						],
-						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Code={{Code}}",
-							"protocol": "http",
-							"host": [
-								"rest",
-								"esms",
-								"vn"
-							],
-							"path": [
-								"MainService.svc",
-								"json",
-								"CheckCodeGen_V4_get"
-							],
-							"query": [
-								{
-									"key": "Phone",
-									"value": "{{Phone}}"
-								},
-								{
-									"key": "ApiKey",
-									"value": "{{ApiKey}}"
-								},
-								{
-									"key": "SecretKey",
-									"value": "{{SecretKey}}"
-								},
-								{
-									"key": "Code",
-									"value": "{{Code}}"
-								}
-							]
-						}
+						"url": "https://rest.esms.vn/MainService.svc/json/GetBalance_json"
 					},
 					"response": []
 				},
@@ -1207,8 +1154,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
@@ -1702,6 +1649,55 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"AssetsUrl\": \"{{AssetsUrl}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"{{IsUnicode}}\",\r\n    \"CustomerEmail\": \"{{CustomerEmail}}\",\r\n    \"CustomerName\": \"{{CustomerName}}\",\r\n    \"CustomerPhone\": \"{{CustomerPhone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ServiceType\": 2,\r\n    \"SmsType\": {{SmsType}}\r\n}"
 						},
 						"url": "http://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/"
+					},
+					"response": []
+				},
+				{
+					"name": "Check code tin Gencode",
+					"id": "5e58c22f-dd3e-4dfd-8921-f794bf1873f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
+							}
+						],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Code={{Code}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"CheckCodeGen_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "Code",
+									"value": "{{Code}}"
+								}
+							]
+						}
 					},
 					"response": []
 				}
