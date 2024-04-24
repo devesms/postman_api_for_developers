@@ -1720,7 +1720,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
 						},
 						"url": "https://status-sms.esms.vn/ZaloCallback/GetCallback"
 					},
@@ -1736,8 +1736,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo?TemplateId={{TemplateId}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&OAId={{OAId}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo?TemplateId={{TemplateId}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&OAId={{OAId}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
