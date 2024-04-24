@@ -1656,7 +1656,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\":\"{{Offset}}\",\r\n    \"Limit\":\"{{Limit}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
 					},
 					"response": []
 				},
