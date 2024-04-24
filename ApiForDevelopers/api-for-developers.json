@@ -1259,7 +1259,7 @@
 							"mode": "raw",
 							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\",\r\n \"SmsType\":\"2\",\r\n \"Brandname\":\"{{Brandname}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/GetTemplate/"
+						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
 					},
 					"response": []
 				},
