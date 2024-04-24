@@ -1722,7 +1722,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
 						},
-						"url": "http://status-sms.esms.vn/ZaloCallback/GetCallback"
+						"url": "https://status-sms.esms.vn/ZaloCallback/GetCallback"
 					},
 					"response": []
 				},
