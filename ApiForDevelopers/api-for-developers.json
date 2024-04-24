@@ -1678,7 +1678,7 @@
 							"mode": "raw",
 							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
 					},
 					"response": []
 				},
