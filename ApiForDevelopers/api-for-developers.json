@@ -1194,8 +1194,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
