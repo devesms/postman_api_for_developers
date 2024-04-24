@@ -1584,10 +1584,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=x04tc1ao4ggn2g5nghk25ogr"
 							}
 						],
 						"body": {
