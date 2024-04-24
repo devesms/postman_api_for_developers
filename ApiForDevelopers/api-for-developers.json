@@ -1694,17 +1694,13 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=ghob0j1dr00pujmvzhk5w4nk"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\",\r\n \"OAID\":\"{{OAID}}\",\r\n \"Offset\": {{Offset}},\r\n \"Count\": {{Count}}\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
 					},
 					"response": []
 				},
