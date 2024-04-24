@@ -1233,7 +1233,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://rest.esms.vn/MainService.svc/json/GetListBrandname/{{ApiKey}}/{{SecretKey}}"
+						"url": "https://rest.esms.vn/MainService.svc/json/GetListBrandname/{{ApiKey}}/{{SecretKey}}"
 					},
 					"response": []
 				},
