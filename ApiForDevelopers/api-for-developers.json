@@ -830,15 +830,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://yourportal.sms/receivecallback/?SMSID=dc712784-9c5f-4c69-b9a8-ea69d56adc9a87&SendFailed=2&SendStatus=5&SendSuccess=0&TotalPrice=0.0000&TotalReceiver=2&TotalSent=2&RequestId=&TypeId=2&telcoid=1&phonenumber=0397840416&switchsmsid=",
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=dc712784-9c5f-4c69-b9a8-ea69d56adc9a87&SendFailed=2&SendStatus=5&SendSuccess=0&TotalPrice=0.0000&TotalReceiver=2&TotalSent=2&RequestId=&TypeId=2&telcoid=1&phonenumber=0901888484&switchsmsid=",
 							"protocol": "https",
 							"host": [
-								"yourportal",
-								"sms"
-							],
-							"path": [
-								"receivecallback",
-								""
+								"{{yourportalreceivecallback}}"
 							],
 							"query": [
 								{
@@ -883,7 +878,7 @@
 								},
 								{
 									"key": "phonenumber",
-									"value": "0397840416"
+									"value": "0901888484"
 								},
 								{
 									"key": "switchsmsid",
@@ -904,15 +899,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://yourportal.sms/receivecallback/?SMSID=82b0bb8aed914a0aab8deba567c9b8c2&SendFailed=0&SendStatus=5&SendSuccess=0&TotalPrice=696987.0000&TotalReceiver=169&TotalSent=169&RequestId=&TypeId=1",
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=82b0bb8aed914a0aab8deba567c9b8c2&SendFailed=0&SendStatus=5&SendSuccess=0&TotalPrice=696987.0000&TotalReceiver=169&TotalSent=169&RequestId=&TypeId=1",
 							"protocol": "https",
 							"host": [
-								"yourportal",
-								"sms"
-							],
-							"path": [
-								"receivecallback",
-								""
+								"{{yourportalreceivecallback}}"
 							],
 							"query": [
 								{
@@ -966,15 +956,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://yourportal.sms/receivecallback/?SMSID=f66545d2-c7e2-4603-984e-d2238c363c8292&SendFailed=1&SendStatus=5&SendSuccess=0&TotalPrice=0.0000&TotalReceiver=1&TotalSent=0&RequestId=&TypeId=25&telcoid=2&phonenumber=0901888484&partnerids=&error_info=\"{\\\"error\\\":-114,\\\"message\\\":\\\"User is inactive, or reject the message, or using an outdated Zalo version, or other internal errors\\\"}\"&oaid=1397492183140006179&tempid=2056446",
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=f66545d2-c7e2-4603-984e-d2238c363c8292&SendFailed=1&SendStatus=5&SendSuccess=0&TotalPrice=0.0000&TotalReceiver=1&TotalSent=0&RequestId=&TypeId=25&telcoid=2&phonenumber=0901888484&partnerids=&error_info=\"{\\\"error\\\":-114,\\\"message\\\":\\\"User is inactive, or reject the message, or using an outdated Zalo version, or other internal errors\\\"}\"&oaid=1397492183140006179&tempid=2056446",
 							"protocol": "https",
 							"host": [
-								"yourportal",
-								"sms"
-							],
-							"path": [
-								"receivecallback",
-								""
+								"{{yourportalreceivecallback}}"
 							],
 							"query": [
 								{
@@ -1051,7 +1036,59 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "https://{{yourportalreceivecallback}}?SMSID=849fe08c19294b02857cf91687021a50250&SendFailed=0&SendStatus=5&SendSuccess=1&TotalPrice=470.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=23&telcoid=2&phonenumber=0901888484",
+							"protocol": "https",
+							"host": [
+								"{{yourportalreceivecallback}}"
+							],
+							"query": [
+								{
+									"key": "SMSID",
+									"value": "849fe08c19294b02857cf91687021a50250"
+								},
+								{
+									"key": "SendFailed",
+									"value": "0"
+								},
+								{
+									"key": "SendStatus",
+									"value": "5"
+								},
+								{
+									"key": "SendSuccess",
+									"value": "1"
+								},
+								{
+									"key": "TotalPrice",
+									"value": "470.0000"
+								},
+								{
+									"key": "TotalReceiver",
+									"value": "1"
+								},
+								{
+									"key": "TotalSent",
+									"value": "1"
+								},
+								{
+									"key": "RequestId",
+									"value": ""
+								},
+								{
+									"key": "TypeId",
+									"value": "23"
+								},
+								{
+									"key": "telcoid",
+									"value": "2"
+								},
+								{
+									"key": "phonenumber",
+									"value": "0901888484"
+								}
+							]
+						}
 					},
 					"response": []
 				},
