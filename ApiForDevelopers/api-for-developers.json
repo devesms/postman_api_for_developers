@@ -360,12 +360,7 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=4zhxi2iaxcyqrlooff2u3vj1"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&Brandname={{Brandname}}&SmsType=2&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}",
 							"protocol": "http",
