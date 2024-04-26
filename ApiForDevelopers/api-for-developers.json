@@ -592,6 +592,28 @@
 					"response": []
 				},
 				{
+					"name": "Gửi tin ZNS không truyền keyname",
+					"id": "0f331c88-ba4b-415c-8683-33cd83e38427",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{value1}}\",\r\n        \"{{value2}}\",\r\n        \"{{value3}}\"\r\n    ],\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"Sandbox\": \"0\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
 					"name": "Gửi tin ZNS dạng X-Form",
 					"id": "671c05c7-b5b2-4a00-9aa8-45ae6d84ff4c",
 					"protocolProfileBehavior": {
@@ -641,32 +663,6 @@
 							]
 						},
 						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post/"
-					},
-					"response": []
-				},
-				{
-					"name": "Gửi tin ZNS không truyền keyname",
-					"id": "0f331c88-ba4b-415c-8683-33cd83e38427",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=hv0fnv0mv4i0qnmx2zrxetvf"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\"ApiKey\":\"{{ApiKey}}\",\r\n\"SecretKey\":\"{{SecretKey}}\",\r\n\"Phone\":\"{{Phone}}\",\r\n\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"],\r\n\"TempID\":\"{{TempID}}\",\r\n\"OAID\":\"{{OAID}}\",\r\n\"SendDate\":\"{{SendDate}}\",\r\n\"Sandbox\":\"0\",\r\n\"RequestId\": \"{{RequestId}}\",\r\n\"campaignid\": \"{{campaignid}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
-						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V4_post_json/"
 					},
 					"response": []
 				},
