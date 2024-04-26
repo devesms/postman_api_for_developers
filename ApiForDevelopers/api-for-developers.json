@@ -696,15 +696,10 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=hv0fnv0mv4i0qnmx2zrxetvf"
-							}
-						],
+						"header": [],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?SmsType=23&OTTUrl={{OTTUrl}}&OTTImgUrl={{OTTImgUrl}}&Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Brandname={{Brandname}}&OTTLabel={{OTTLabel}}&CallbackUrl={{CallbackUrl}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?SmsType=23&OTTUrl={{OTTUrl}}&OTTImgUrl={{OTTImgUrl}}&Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Brandname={{Brandname}}&OTTLabel={{OTTLabel}}&CallbackUrl={{CallbackUrl}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
