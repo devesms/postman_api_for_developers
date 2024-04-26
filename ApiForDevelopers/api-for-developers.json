@@ -505,7 +505,7 @@
 								}
 							}
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4/"
 					},
 					"response": []
 				},
