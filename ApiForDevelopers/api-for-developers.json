@@ -515,8 +515,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&SmsType=8&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&SmsType=8&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
