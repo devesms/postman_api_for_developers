@@ -587,7 +587,7 @@
 							"mode": "raw",
 							"raw": "<RQST>\r\n<APIKEY>{{APIKEY}}</APIKEY>\r\n<SECRETKEY>{{SECRETKEY}}</SECRETKEY>\r\n<CONTENT>{{CONTENT}}</CONTENT>\r\n<SMSTYPE>1</SMSTYPE>\r\n<BRANDNAME>{{BRANDNAME}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname"
 					},
 					"response": []
 				},
