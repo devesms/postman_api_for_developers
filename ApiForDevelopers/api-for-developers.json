@@ -684,7 +684,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"{{SmsType}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"1\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
 					"response": []
 				},
