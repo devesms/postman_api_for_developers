@@ -662,7 +662,7 @@
 								}
 							]
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post/"
 					},
 					"response": []
 				},
