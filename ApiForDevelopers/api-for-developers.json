@@ -489,16 +489,12 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							},
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
+								"value": "text/plain"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<RQST>\r\n<APIKEY><{{ApiKey}}</APIKEY>\r\n<SECRETKEY>{{SecretKey}}</SECRETKEY>\r\n<CONTENT>{{Content}}</CONTENT>\r\n<SMSTYPE>2</SMSTYPE>\r\n<BRANDNAME>{{Brandname}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{Phone}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>",
+							"raw": "<RQST>\r\n<APIKEY><{{ApiKey}}</APIKEY>\r\n<SECRETKEY>{{SecretKey}}</SECRETKEY>\r\n<CONTENT>{{Content}}</CONTENT>\r\n<SMSTYPE>2</SMSTYPE>\r\n<BRANDNAME>{{Brandname}}</BRANDNAME>\r\n<SENDDATE>{{senddate}}</SENDDATE>\r\n<CALLBACKURL>{{callbackUrl}}}</CALLBACKURL>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{Phone}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>",
 							"options": {
 								"raw": {
 									"language": "text"
