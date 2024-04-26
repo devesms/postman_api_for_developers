@@ -2056,12 +2056,7 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=b31sfztncr4yoznoxr2dpve1"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "https://voiceapi.esms.vn/MainService.svc/json/GetSendStatus?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&ReferenceId={{SMSID}}",
 							"protocol": "https",
