@@ -362,7 +362,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&Brandname={{Brandname}}&SmsType=2&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}",
+							"raw": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&IsUnicode={{IsUnicode}}&Brandname={{Brandname}}&SmsType=2&CallbackUrl={{CallbackUrl}}&RequestId={{RequestId}}&SendDate={{yyyy-mm-dd HH:mm:hh}}&SandBox={{SandBox}}",
 							"protocol": "https",
 							"host": [
 								"rest",
@@ -414,6 +414,11 @@
 								{
 									"key": "SendDate",
 									"value": "{{yyyy-mm-dd HH:mm:hh}}"
+								},
+								{
+									"key": "SandBox",
+									"value": "{{SandBox}}",
+									"type": "text"
 								}
 							]
 						}
