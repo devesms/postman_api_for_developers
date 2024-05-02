@@ -1231,7 +1231,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin dạng yêu cầu mẫu thông tin người dùng",
+					"name": "Tin zalo dạng yêu cầu mẫu thông tin người dùng",
 					"id": "aabcd08e-e84a-4e9a-9598-c894af957d5b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
