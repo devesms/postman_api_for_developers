@@ -24,9 +24,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"Content\": \"{{Content}}\",\r\n   \"Phone\": \"{{Phone}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"Brandname\": \"{{Brandname}}\",\r\n   \"SmsType\": \"2\",\r\n   \"IsUnicode\": {{IsUnicode}},\r\n   \"Sandbox\": {{Sandbox}},\r\n   \"campaignid\": \"{{campaignid}}\",\r\n   \"RequestId\": \"{{RequestId}}\",\r\n   \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n   \"SendDate\":{{SendDate}}\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"2\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
 					"response": []
 				},
@@ -46,7 +46,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"Content\": \"{{Content}}\",\r\n   \"Phone\": \"{{Phone}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"SmsType\": \"8\",\r\n   \"IsUnicode\": {{IsUnicode}},\r\n   \"Sandbox\": {{Sandbox}},\r\n   \"campaignid\": \"{{campaignid}}\",\r\n   \"RequestId\": \"{{RequestId}}\",\r\n   \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n   \"SendDate\":{{SendDate}}\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"8\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
@@ -68,9 +68,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\":\"{{SecretKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Brandname\":\"{{Brandname}}\",\r\n    \"Content\":\"{{Content}}\", \r\n    \"Phones\":[ \"{{Phones}}\",\"{{Phones}}\",\"{{Phones}}\"],\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SmsType\":\"1\",\r\n    \"SendDate\":\"{{SendDate}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
 					},
 					"response": []
 				},
@@ -85,9 +85,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
 					},
 					"response": []
 				},
@@ -107,7 +112,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\"{{param1}}\",\"{{param2}}\",\"{{param3}}\"],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\":\"{{RequestId}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\r\n                \"{{param1}}\",\r\n                \"{{param2}}\",\r\n                \"{{param3}}\"\r\n            ],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\": \"{{RequestId}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/"
 					},
@@ -178,7 +183,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":0,\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"{{template_type}}\",\r\n                    \"language\": \"{{language}}\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"image_url\": \"{{image_url}}\",\r\n                            \"type\": \"banner\"\r\n                        },\r\n                        {\r\n                            \"type\": \"header\",\r\n                            \"content\": \"{{content}}\",\r\n                            \"align\": \"{{align}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"table\",\r\n                            \"content\": [\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"style\": \"{{style}}\",\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        }\r\n                    ],\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.open.url\",\r\n                            \"payload\": {\r\n                                \"url\": \"{{url}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.query.show\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.sms\",\r\n                            \"payload\": {\r\n                                \"content\": \"{{content}}\",\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        },\r\n                    \r\n                        {\r\n                        \"title\": \"{{title}}\",\r\n                        \"image_icon\": \"{{image_icon}}\",\r\n                        \"type\": \"oa.open.phone\",\r\n                        \"payload\": {\r\n                            \"phone_code\": \"{{phone_code}}\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\": 0,\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"{{template_type}}\",\r\n                    \"language\": \"{{language}}\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"image_url\": \"{{image_url}}\",\r\n                            \"type\": \"banner\"\r\n                        },\r\n                        {\r\n                            \"type\": \"header\",\r\n                            \"content\": \"{{content}}\",\r\n                            \"align\": \"{{align}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"table\",\r\n                            \"content\": [\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"style\": \"{{style}}\",\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        }\r\n                    ],\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.open.url\",\r\n                            \"payload\": {\r\n                                \"url\": \"{{url}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.query.show\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.sms\",\r\n                            \"payload\": {\r\n                                \"content\": \"{{content}}\",\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.open.phone\",\r\n                            \"payload\": {\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -205,7 +210,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"OAID\": \"{{OAID}}\",\r\n\"CallbackUrl\":\"{{CallbackURL}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{UserID}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"request_user_info\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"title\": \"{{Title}}\",\r\n                            \"subtitle\": \"{{Subtitle}}\",\r\n                            \"image_url\": \"{{ImageURL}}\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackURL}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{UserID}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"request_user_info\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"title\": \"{{Title}}\",\r\n                            \"subtitle\": \"{{Subtitle}}\",\r\n                            \"image_url\": \"{{ImageURL}}\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -232,7 +237,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"ApiKey\": \"{{APIKEY}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"Phone\": \"{{Phone}}\",\r\n\"Params\": [\"{{PARAM1}}\",\"{{PARAM2}}\",\"{{PARAM3}}\"],\r\n\"IsJourney\": true,\r\n\"OrderId\": \"{{ORDERID}}\",\r\n\"TempID\": \"{{TempID}}\",\r\n\"OAID\": \"{{OAID}}\",\r\n\"RequestId\": \"{{RequestId}}\",\r\n\"campaignid\": \"{{campaignid}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{Param1}}\",\r\n        \"{{Param2}}\",\r\n        \"{{Param3}}\"\r\n    ],\r\n    \"IsJourney\": true,\r\n    \"OrderId\": \"{{OrderId}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V4_post_json/"
 					},
@@ -254,7 +259,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\"{{Phone}}\"],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\r\n        \"{{Phone1}}\",\"{{Phone2}}\",\"{{Phone3}}\"\r\n    ],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
 					},
@@ -340,7 +345,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"Phone\": \"{{Phone}}\",\r\n \"TimeAlive\": \"{{TimeAlive}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"MultiChannelTempId\": \"{{MultiChannelTempId}}\",\r\n \"TypeId\":\"{{TypeId}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TimeAlive\": \"{{TimeAlive}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"MultiChannelTempId\": \"{{MultiChannelTempId}}\",\r\n    \"TypeId\": \"{{TypeId}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V5"
 					},
