@@ -75,7 +75,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Zalo OTT",
+					"name": "Tin Zalo",
 					"id": "2d996c73-a5c2-45ca-973e-d18aabb960c7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -92,7 +92,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin mutichanel: ZNS => SMS OTP/CSKH",
+					"name": "Tin mutichanel: Zalo => SMS OTP/CSKH",
 					"id": "621e424e-1e47-4215-8d8a-21ef56f017b9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -114,7 +114,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin ZNS mỗi khách hàng một nội dung",
+					"name": "Tin Zalo mỗi khách hàng một nội dung",
 					"id": "1f75d02b-c622-4de4-aedc-dd9d4c2b16ea",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -124,19 +124,19 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"TempID\": \"{{TempID}}\",\r\n\"Data\": [\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"]},\r\n{\"Phone\":\"{{Phone}}\",\"Params\":[\"{{value1}}\",\"{{value2}}\",\"{{value3}}\"]}\r\n],\r\n\"SendDate\":\"{{SendDate}}\",\r\n\"OAID\":\"{{OAID}}\",\r\n\"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"Data\": [\r\n        {\r\n            \"Phone\": \"{{Phone}}\",\r\n            \"Params\": [\r\n                \"{{value1}}\",\r\n                \"{{value2}}\",\r\n                \"{{value3}}\"\r\n            ]\r\n        },\r\n        {\r\n            \"Phone\": \"{{Phone}}\",\r\n            \"Params\": [\r\n                \"{{value1}}\",\r\n                \"{{value2}}\",\r\n                \"{{value3}}\"\r\n            ]\r\n        },\r\n        {\r\n            \"Phone\": \"{{Phone}}\",\r\n            \"Params\": [\r\n                \"{{value1}}\",\r\n                \"{{value2}}\",\r\n                \"{{value3}}\"\r\n            ]\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/"
 					},
 					"response": []
 				},
 				{
-					"name": "Tin ZaloOTT Tư vấn",
+					"name": "Tin Zalo tư vấn",
 					"id": "c0e00f1f-0c1f-4be1-8aac-f730d14e0e29",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -158,12 +158,12 @@
 								}
 							}
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
 					},
 					"response": []
 				},
 				{
-					"name": "Tin ZaloOTT Giao dịch",
+					"name": "Tin Zalo giao dịch",
 					"id": "eb8ca6b8-796c-463e-95b7-3601c8f49b33",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -185,12 +185,12 @@
 								}
 							}
 						},
-						"url": "http://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V5_post_json/"
+						"url": "https://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V5_post_json/"
 					},
 					"response": []
 				},
 				{
-					"name": "Tin ZaloOTT dạng yêu cầu thông tin người dùng",
+					"name": "Tin Zalo dạng yêu cầu thông tin người dùng",
 					"id": "a8181709-4215-4375-bdb3-3e6c5a0a23c4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -217,7 +217,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin ZNS JOURNEY",
+					"name": "Tin Zalo hành trình",
 					"id": "bdf6fa30-e725-4347-bcfc-84d388f64674",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
