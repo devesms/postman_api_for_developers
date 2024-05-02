@@ -934,7 +934,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Zalo OTT",
+					"name": "Tin Zalo",
 					"id": "b98ca55e-3001-4446-b5bb-a4ab86127b0b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1080,7 +1080,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Zalo OTT tư vấn",
+					"name": "Tin Zalo tư vấn",
 					"id": "cd0e23a3-5aa5-4198-a8bb-be0d8e450df9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
