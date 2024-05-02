@@ -877,7 +877,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Quảng cáo",
+					"name": "Tin quảng cáo",
 					"id": "eeaca8c5-ef65-4fed-ac2e-697d0360327b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1015,7 +1015,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin viber",
+					"name": "Tin Viber",
 					"id": "6acfe1fc-8601-4bce-9549-65bf17f279b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1153,7 +1153,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Zalo OTT giao dịch",
+					"name": "Tin Zalo giao dịch",
 					"id": "472bc96b-ae61-4c6d-a5fd-dad5e17c4b70",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
