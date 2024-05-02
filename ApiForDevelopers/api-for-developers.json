@@ -1344,7 +1344,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"SmsType\":{{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\":\"{{DateTo}}\",\r\n    \"Page\":{{Page}},\r\n    \"PageSize\":{{PageSize}}\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
+						"url": "https://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
 					},
 					"response": []
 				},
