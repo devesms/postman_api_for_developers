@@ -1770,7 +1770,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy thông tin callback tin Zalo OTT",
+					"name": "Lấy thông tin callback tin Zalo",
 					"id": "eb870a67-0f33-444d-85e5-bbabf920299d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1792,7 +1792,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy thông tin chi tiết template Zalo OTT",
+					"name": "Lấy thông tin chi tiết template Zalo",
 					"id": "43e884e9-36a4-4272-94bd-c388551e7c60",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1858,7 +1858,7 @@
 					"response": []
 				},
 				{
-					"name": "Đăng ký template Zalo OTT",
+					"name": "Đăng ký template Zalo",
 					"id": "f25701ff-8ce7-4c5d-bca6-c7eafd158977",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
