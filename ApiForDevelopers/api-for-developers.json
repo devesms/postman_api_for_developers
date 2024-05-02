@@ -212,7 +212,7 @@
 								}
 							}
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
 					},
 					"response": []
 				},
@@ -256,7 +256,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\"{{Phone}}\"],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
+						"url": "https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
 					},
 					"response": []
 				},
@@ -270,8 +270,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TimeAlive={{TimeAlive}}&NumCharOfCode={{NumCharOfCode}}&Brandname={{Brandname}}&Type=2&message={{Content}}&IsNumber={{IsNumber}}",
-							"protocol": "http",
+							"raw": "https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TimeAlive={{TimeAlive}}&NumCharOfCode={{NumCharOfCode}}&Brandname={{Brandname}}&Type=2&message={{Content}}&IsNumber={{IsNumber}}",
+							"protocol": "https",
 							"host": [
 								"rest",
 								"esms",
@@ -325,7 +325,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin gencode tự động multichanel: ZNS -> SMS",
+					"name": "Tin gencode tự động multichanel: Zalo -> SMS",
 					"id": "3ccbb0ef-9dec-4574-96db-397674952f88",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -342,7 +342,7 @@
 							"mode": "raw",
 							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"Phone\": \"{{Phone}}\",\r\n \"TimeAlive\": \"{{TimeAlive}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"MultiChannelTempId\": \"{{MultiChannelTempId}}\",\r\n \"TypeId\":\"{{TypeId}}\"\r\n}"
 						},
-						"url": "http://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V5"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V5"
 					},
 					"response": []
 				}
