@@ -68,7 +68,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
 					},
