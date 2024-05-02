@@ -1398,7 +1398,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"ApiKey\":\"{{ApiKey}}\",\r\n\"SecretKey\":\"{{SecretKey}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetBalance_json"
 					},
@@ -1420,7 +1420,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"SmsType\":{{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\":\"{{DateTo}}\",\r\n    \"Page\":{{Page}},\r\n    \"PageSize\":{{PageSize}}\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": {{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\": \"{{DateTo}}\",\r\n    \"Page\": {{Page}},\r\n    \"PageSize\": {{PageSize}}\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
 					},
@@ -1535,7 +1535,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\",\r\n \"SmsType\":\"2\",\r\n \"Brandname\":\"{{Brandname}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"2\",\r\n    \"Brandname\": \"{{Brandname}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
 					},
@@ -1631,14 +1631,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/"
 					},
 					"response": []
 				},
 				{
-					"name": "Lấy danh sách template ZNS theo OAID",
+					"name": "Lấy danh sách template Zalo theo OAID",
 					"id": "d201e3b3-5f46-4db7-b829-2b730a29b6b4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1653,7 +1653,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ApiKey\": \"{{ApiKey}}\",\r\n  \"SecretKey\": \"{{SecretKey}}\",\r\n  \"OAId\": \"{{OAId}}\",\r\n  \"SmsType\": \"{{SmsType}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"{{OAId}}\",\r\n    \"SmsType\": \"{{SmsType}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
 					},
@@ -1719,7 +1719,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\":\"{{Offset}}\",\r\n    \"Limit\":\"{{Limit}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\": \"{{Offset}}\",\r\n    \"Limit\": \"{{Limit}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
 					},
@@ -1741,7 +1741,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\": \"{{ApiKey}}\",\r\n \"SecretKey\": \"{{SecretKey}}\",\r\n \"OAID\": \"{{OAID}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
 					},
@@ -1763,7 +1763,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"ApiKey\":\"{{ApiKey}}\",\r\n \"SecretKey\":\"{{SecretKey}}\",\r\n \"OAID\":\"{{OAID}}\",\r\n \"Offset\": {{Offset}},\r\n \"Count\": {{Count}}\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Offset\": {{Offset}},\r\n    \"Count\": {{Count}}\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
 					},
