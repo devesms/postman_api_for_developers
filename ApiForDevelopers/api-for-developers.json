@@ -703,7 +703,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?SmsType=23&OTTUrl={{OTTUrl}}&OTTImgUrl={{OTTImgUrl}}&Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Brandname={{Brandname}}&OTTLabel={{OTTLabel}}&CallbackUrl={{CallbackUrl}}",
+							"raw": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?SmsType=23&OTTUrl={{OTTUrl}}&OTTImgUrl={{OTTImgUrl}}&Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Brandname={{Brandname}}&OTTLabel={{OTTLabel}}&CallbackUrl={{CallbackUrl}}&Sandbox={{Sandbox}}",
 							"protocol": "https",
 							"host": [
 								"rest",
@@ -755,6 +755,10 @@
 								{
 									"key": "CallbackUrl",
 									"value": "{{CallbackUrl}}"
+								},
+								{
+									"key": "Sandbox",
+									"value": "{{Sandbox}}"
 								}
 							]
 						}
