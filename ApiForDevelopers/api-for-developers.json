@@ -142,7 +142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"849018884xx\",\r\n    \"HashPhone\": \"SHA-256(phone)\",\r\n    \"TempID\": \"200300\",\r\n    \"OAID\": \"4361812075662036180\",\r\n    \"TempData\": {\r\n        \"customer_name\": \"Thái Hà\",\r\n        \"OTP\": \"528\"\r\n    },\r\n    \"campaignid\": \"postman\",\r\n    \"RequestId\": \"8a5901e5-a879-4dc0-bb55-0d80dc4f8b2d\",\r\n    \"CallbackUrl\": \"https://your-domain/esms/receivesms/esms/receivezns\",\r\n    \"Sandbox\": \"1\"\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"849018884xx\",\r\n    \"HashPhone\": \"SHA-256(phone)\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"TempData\": {\r\n        \"{{key1}}\": \"{{value1}}\",\r\n        \"{{key2}}\": \"{{value2}}\"\r\n    },\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
