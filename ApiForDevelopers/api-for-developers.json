@@ -98,6 +98,36 @@
 				},
 				{
 					"name": "Tin nhắn Zalo sử dụng hash phone",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "740b7121-f861-4277-bfba-88ac01eca481",
+								"exec": [
+									"const crypto = require('crypto-js');\r",
+									"\r",
+									"// retrieve current body\r",
+									"const body = JSON.parse(pm.request.body.raw);\r",
+									"\r",
+									"// Extract the 'Phone' field from the request body JSON\r",
+									"var phone = body.Phone;\r",
+									"\r",
+									"// Hash the 'Phone' using crypto.SHA256\r",
+									"var hashedPhone = crypto.SHA256(phone).toString();\r",
+									"// console.log(hashedPhone)\r",
+									"\r",
+									"// Set the hashed value to 'HashPhone' in the request body JSON\r",
+									"body.HashPhone=hashedPhone;\r",
+									"\r",
+									"// write back updated body\r",
+									"pm.request.body.raw = body; // write back updated body\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "11cf40ab-2970-4d03-9cc6-374177bfc103",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -112,7 +142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"0901888484\",\r\n    \r\n    \"HashPhone\": \"SHA-256(phone)\",\r\n    \"TempID\": \"200300\",\r\n    \"OAID\": \"4361812075662036180\",\r\n    \"TempData\": {\r\n        \"customer_name\": \"Thái Hà\",\r\n        \"OTP\": \"528\"\r\n    },\r\n    \"campaignid\": \"postman\",\r\n    \"RequestId\": \"8a5901e5-a879-4dc0-bb55-0d80dc4f8b2d\",\r\n    \"CallbackUrl\": \"https://your-domain/esms/receivesms/esms/receivezns\",\r\n    \"Sandbox\": \"1\"\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"849018884xx\",\r\n    \"HashPhone\": \"SHA-256(phone)\",\r\n    \"TempID\": \"200300\",\r\n    \"OAID\": \"4361812075662036180\",\r\n    \"TempData\": {\r\n        \"customer_name\": \"Thái Hà\",\r\n        \"OTP\": \"528\"\r\n    },\r\n    \"campaignid\": \"postman\",\r\n    \"RequestId\": \"8a5901e5-a879-4dc0-bb55-0d80dc4f8b2d\",\r\n    \"CallbackUrl\": \"https://your-domain/esms/receivesms/esms/receivezns\",\r\n    \"Sandbox\": \"1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
