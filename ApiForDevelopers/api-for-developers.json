@@ -97,6 +97,33 @@
 					"response": []
 				},
 				{
+					"name": "Tin nhắn Zalo sử dụng hash phone",
+					"id": "11cf40ab-2970-4d03-9cc6-374177bfc103",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"0901888484\",\r\n    \r\n    \"HashPhone\": \"SHA-256(phone)\",\r\n    \"TempID\": \"200300\",\r\n    \"OAID\": \"4361812075662036180\",\r\n    \"TempData\": {\r\n        \"customer_name\": \"Thái Hà\",\r\n        \"OTP\": \"528\"\r\n    },\r\n    \"campaignid\": \"postman\",\r\n    \"RequestId\": \"8a5901e5-a879-4dc0-bb55-0d80dc4f8b2d\",\r\n    \"CallbackUrl\": \"https://your-domain/esms/receivesms/esms/receivezns\",\r\n    \"Sandbox\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V6/hash_phone/"
+					},
+					"response": []
+				},
+				{
 					"name": "Tin mutichanel: Zalo => SMS OTP/CSKH",
 					"id": "621e424e-1e47-4215-8d8a-21ef56f017b9",
 					"protocolProfileBehavior": {
