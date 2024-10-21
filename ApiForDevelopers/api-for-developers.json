@@ -142,7 +142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"849018884xx\",\r\n    \"HashPhone\": \"SHA-256(phone)\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"TempData\": {\r\n        \"{{key1}}\": \"{{value1}}\",\r\n        \"{{key2}}\": \"{{value2}}\"\r\n    },\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\"\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"849018884xx\",\r\n    \"HashPhone\": \"{{SHA-256(phone)}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"TempData\": {\r\n        \"{{key1}}\": \"{{value1}}\",\r\n        \"{{key2}}\": \"{{value2}}\"\r\n    },\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
