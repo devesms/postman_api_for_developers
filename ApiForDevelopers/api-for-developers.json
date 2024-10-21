@@ -149,7 +149,8 @@
 								}
 							}
 						},
-						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V6/hash_phone/"
+						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V6/hash_phone/",
+						"description": "### Send Zalo Message\n\nThis endpoint allows you to send a Zalo message using the provided payload.\n\n#### Request Body\n\n- `ApiKey` (text, required): The API key for authentication.\n    \n- `SecretKey` (text, required): The secret key for authentication.\n    \n- `Phone` (text, required): The phone number to which the Zalo message will be sent.\n    \n- `HashPhone` (text, required): The SHA-256 hash of the phone number.\n    \n- `OAID` (text, required): The OAID for the Zalo message.\n    \n- `TempID` (text, required): The template ID for the Zalo message.\n    \n- `TempData` (object, required): The template data with key-value pairs.\n    \n- `campaignid` (text, required): The campaign ID for tracking purposes.\n    \n- `RequestId` (text, required): The unique ID for the request.\n    \n- `CallbackUrl` (text, required): The URL to which the callback response will be sent.\n    \n- `Sandbox` (text, required): Indicates if the request is in sandbox mode.\n    \n"
 					},
 					"response": []
 				},
