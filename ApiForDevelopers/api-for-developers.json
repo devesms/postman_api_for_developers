@@ -866,6 +866,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Hàm lấy danh sách UID có tương tác theo khoảng thời gian",
+					"id": "2f26fb8e-2b78-4bbc-89a7-d739a7c32ff7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"4097311281936189049\",\n    \"Offset\": 0,\n    \"Count\": 50,\n    \"FromDate\": \"01/09/2024\",\n    \"ToDate\": \"13/10/2024\",\n    \"IsFollower\": \"\",\n    \"TagName\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
+					},
+					"response": []
 				}
 			],
 			"id": "5fc25b6c-3b60-4b5b-81f1-a36fd301db90",
