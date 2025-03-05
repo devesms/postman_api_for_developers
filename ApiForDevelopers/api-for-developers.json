@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "bb5510b5-d1b0-49ee-8c94-ce718d5e5d0e",
 		"name": "Api for Developers",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -324,7 +324,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin gencode tự động SMS",
+					"name": "Tạo và gửi mã xác thực tự động bằng tin nhắn SMS",
 					"id": "a3a8616e-f2bc-4ad4-8f41-b5affda6c85d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -388,7 +388,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin gencode tự động multichanel: Zalo -> SMS",
+					"name": "Tạo và gửi mã xác thực tự động đa kênh: ZNS => SMS",
 					"id": "3ccbb0ef-9dec-4574-96db-397674952f88",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -864,33 +864,6 @@
 								}
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Hàm lấy danh sách UID có tương tác theo khoảng thời gian",
-					"id": "2f26fb8e-2b78-4bbc-89a7-d739a7c32ff7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"4097311281936189049\",\n    \"Offset\": 0,\n    \"Count\": 50,\n    \"FromDate\": \"01/09/2024\",\n    \"ToDate\": \"13/10/2024\",\n    \"IsFollower\": \"\",\n    \"TagName\": \"\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
 					},
 					"response": []
 				}
@@ -1745,6 +1718,33 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"{{OAId}}\",\r\n    \"SmsType\": \"{{SmsType}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm lấy danh sách UID có tương tác theo khoảng thời gian",
+					"id": "2f26fb8e-2b78-4bbc-89a7-d739a7c32ff7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"4097311281936189049\",\n    \"Offset\": 0,\n    \"Count\": 50,\n    \"FromDate\": \"01/09/2024\",\n    \"ToDate\": \"13/10/2024\",\n    \"IsFollower\": \"\",\n    \"TagName\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
 					},
 					"response": []
 				},
