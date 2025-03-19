@@ -9,7 +9,7 @@
 			"name": "Gửi tin",
 			"item": [
 				{
-					"name": "Tin SMS OTP/chăm sóc khách hàng",
+					"name": "Tin nhắn SMS OTP/CSKH (Khuyên Dùng)",
 					"id": "850974b9-12cf-46f5-946c-e8e15aa3585b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -27,6 +27,50 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"2\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin nhắn Zalo",
+					"id": "2d996c73-a5c2-45ca-973e-d18aabb960c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin nhắn đa kênh: Zalo => SMS OTP/CSKH",
+					"id": "621e424e-1e47-4215-8d8a-21ef56f017b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\r\n                \"{{param1}}\",\r\n                \"{{param2}}\",\r\n                \"{{param3}}\"\r\n            ],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\": \"{{RequestId}}\",\r\n            \"Sandbox\":\"{{Sandbox}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"Sandbox\":\"{{Sandbox}}\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/"
 					},
 					"response": []
 				},
@@ -71,28 +115,6 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin Zalo",
-					"id": "2d996c73-a5c2-45ca-973e-d18aabb960c7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TempData\": [\r\n        {\r\n            \"key\": \"{{key1}}\",\r\n            \"value\": \"{{value1}}\"\r\n        },\r\n        {\r\n            \"key\": \"{{key2}}\",\r\n            \"value\": \"{{value2}}\"\r\n        }\r\n    ],\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
 					},
 					"response": []
 				},
@@ -151,28 +173,6 @@
 						},
 						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V6/hash_phone/",
 						"description": "### Send Zalo Message\n\nThis endpoint allows you to send a Zalo message using the provided payload.\n\n#### Request Body\n\n- `ApiKey` (text, required): The API key for authentication.\n    \n- `SecretKey` (text, required): The secret key for authentication.\n    \n- `Phone` (text, required): The phone number to which the Zalo message will be sent.\n    \n- `HashPhone` (text, required): The SHA-256 hash of the phone number.\n    \n- `OAID` (text, required): The OAID for the Zalo message.\n    \n- `TempID` (text, required): The template ID for the Zalo message.\n    \n- `TempData` (object, required): The template data with key-value pairs.\n    \n- `campaignid` (text, required): The campaign ID for tracking purposes.\n    \n- `RequestId` (text, required): The unique ID for the request.\n    \n- `CallbackUrl` (text, required): The URL to which the callback response will be sent.\n    \n- `Sandbox` (text, required): Indicates if the request is in sandbox mode.\n    \n"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin mutichanel: Zalo => SMS OTP/CSKH",
-					"id": "621e424e-1e47-4215-8d8a-21ef56f017b9",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Channels\": [\r\n        \"zalo\",\r\n        \"sms\"\r\n    ],\r\n    \"Data\": [\r\n        {\r\n            \"TempID\": \"{{TempID}}\",\r\n            \"Params\": [\r\n                \"{{param1}}\",\r\n                \"{{param2}}\",\r\n                \"{{param3}}\"\r\n            ],\r\n            \"OAID\": \"{{OAID}}\",\r\n            \"campaignid\": \"{{campaignid}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"RequestId\": \"{{RequestId}}\",\r\n            \"Sandbox\":\"{{Sandbox}}\"\r\n        },\r\n        {\r\n            \"Content\": \"{{Content}}\",\r\n            \"IsUnicode\": \"{{IsUnicode}}\",\r\n            \"SmsType\": \"{{SmsType}}\",\r\n            \"Brandname\": \"{{Brandname}}\",\r\n            \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n            \"Sandbox\":\"{{Sandbox}}\"\r\n        }\r\n    ]\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/"
 					},
 					"response": []
 				},
