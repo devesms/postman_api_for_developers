@@ -75,50 +75,6 @@
 					"response": []
 				},
 				{
-					"name": "Tin SMS cố định giá rẻ",
-					"id": "562c21f1-e073-4352-8a24-eac62657953b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"8\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin SMS quảng cáo",
-					"id": "001e2636-af74-42d3-b25a-173b1dd1faed",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
-					},
-					"response": []
-				},
-				{
 					"name": "Tin nhắn Zalo sử dụng hash phone",
 					"event": [
 						{
@@ -199,12 +155,15 @@
 					"response": []
 				},
 				{
-					"name": "Tin Zalo tư vấn",
-					"id": "c0e00f1f-0c1f-4be1-8aac-f730d14e0e29",
+					"name": "Tin Zalo Tư vấn dạng văn bản",
+					"id": "75520382-a5cf-4d3c-a0dd-913ba5f36e99",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -214,10 +173,70 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"text\": \"{{text}}\",\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"payload\": {\r\n                                \"url\": \"{{url}}\"\r\n                            },\r\n                            \"type\": \"oa.open.url\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.query.show\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.query.hide\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.sms\",\r\n                            \"payload\": {\r\n                                \"content\": \"{{content}}\",\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.phone\",\r\n                            \"payload\": {\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"{{OAID}}\",\n    \"User_id\": \"{{User_id}}\",\n    \"Content\": \"Tin Zalo Tư vấn dạng văn bản\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo Tư vấn đính kèm ảnh",
+					"id": "b5b1a272-9cad-4034-942b-1c8979ccc941",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"{{OAID}}\", \n    \"Payload\": {\n        \"recipient\": {\n            \"user_id\": \"{{user_id}}\"\n        },\n        \"message\": {\n            \"text\": \"Tin Zalo Tư vấn đính kèm ảnh\",\n            \"attachment\": {\n                \"type\": \"template\",\n                \"payload\": {\n                    \"template_type\": \"media\",\n                    \"elements\": [\n                        {\n                            \"media_type\": \"image\",\n                            \"url\": \"https://minio.esms.vn/blogimg/agent-1/BlogImg/full_3f8df17c-2d15-4ecb-b9fd-3bcc9cb0d97b.png\"\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo Tư vấn dạng button",
+					"id": "ef7014b1-6484-4cd0-9722-863a4bfb755d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"{{OAID}}\",\n    \"Payload\": {\n        \"recipient\": {\n            \"user_id\": \"{{user_id}}\"\n        },\n        \"message\": {\n            \"text\": \"Chào mừng bạn đến với hệ thống eSMS. Đây là tin nhắn zalo dạng button.\",\n            \"attachment\": {\n                \"type\": \"template\",\n                \"payload\": {\n                    \"buttons\": [\n                        {\n                            \"title\": \"Link url\",\n                            \"payload\": {\n                                \"url\": \"https://developers.esms.vn/esms-api/ham-gui-tin/tin-zalo-tu-van-dang-button\"\n                            },\n                            \"type\": \"oa.open.url\"\n                        },\n                        {\n                            \"title\": \"QUERY SHOW\",\n                            \"type\": \"oa.query.show\",\n                            \"payload\": \"#callback_data\"\n                        },\n                        {\n                            \"title\": \"QUERY HIDE\",\n                            \"type\": \"oa.query.hide\",\n                            \"payload\": \"#callback_data\"\n                        },\n                        {\n                            \"title\": \"OPEN SMS\",\n                            \"type\": \"oa.open.sms\",\n                            \"payload\": {\n                                \"content\": \"Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi. Chúc quý khách một ngày mới tốt lành!\",\n                                \"phone_code\": \"0901888484\"\n                            }\n                        },\n                        {\n                            \"title\": \"OPEN PHONE\",\n                            \"type\": \"oa.open.phone\",\n                            \"payload\": {\n                                \"phone_code\": \"0901888484\"\n                            }\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "text"
 								}
 							}
 						},
@@ -253,7 +272,7 @@
 					"response": []
 				},
 				{
-					"name": "Tin Zalo dạng yêu cầu thông tin người dùng",
+					"name": "Tin Zalo Tư vấn dạng yêu cầu thông tin người dùng",
 					"id": "a8181709-4215-4375-bdb3-3e6c5a0a23c4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -276,6 +295,50 @@
 							}
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin SMS cố định giá rẻ",
+					"id": "562c21f1-e073-4352-8a24-eac62657953b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"8\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin SMS quảng cáo",
+					"id": "001e2636-af74-42d3-b25a-173b1dd1faed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
 					},
 					"response": []
 				},
