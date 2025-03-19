@@ -24,7 +24,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"2\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
+							"raw": "{\r\n   \"ApiKey\": \"APIKEYCUABAN\",\r\n   \"Content\": \"CODE la ma xac minh dang ky Baotrixemay cua ban\",\r\n   \"Phone\": \"0901888484\",\r\n   \"SecretKey\": \"SECRETKEYCUABAN\",\r\n   \"Brandname\": \"Baotrixemay\",\r\n   \"SmsType\": \"2\",\r\n   \"IsUnicode\": \"0\",\r\n   \"campaignid\": \"Cảm ơn sau mua hàng tháng 7\",\r\n   \"RequestId\": \"c82cd356-bf49-4113-9466-65a7f6359c96\",\r\n   \"CallbackUrl\": \"https://esms.vn/webhook/\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
@@ -422,7 +422,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\r\n        \"{{Phone1}}\",\"{{Phone2}}\",\"{{Phone3}}\"\r\n    ],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"🍀 🍀 Chúng tôi vừa mở bán căn hộ ĐẸP NHẤT thuộc siêu dự án- Đất nền sổ đỏ sở hữu lâu dài.\\r\\n🌼 🌼 THANH TOÁN 15%  SỞ HỮU ngay Căn Hộ hiện đại & đẳng cấp nhất. 🏚 🏚  ƯU ĐÃI GIỮ CHỔ SỚM 3% cùng CHIẾT KHẤU lên đến 15%.\\r\\n🔆 🔆   CĂN ĐẸP GIÁ TỐT cho khách hàng nhanh tay booking. NHẬN BÁO GIÁ NGAY!! 🍀 🍀🍀\",\r\n    \"OttImgUrl\": \"https://minio.esms.vn/shared/fbff4ff5694a44c688d4f93eda4572af.png\",\r\n    \"OttLabel\": \"Dịch vụ SMS Viber\",\r\n    \"OttUrl\": \"https://esms.vn/dich-vu/dich-vu-sms-viber\",\r\n    \"Phones\": [\r\n        \"0901888484\"\r\n    ],\r\n    \"SmsType\": \"23\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
 					},
@@ -444,7 +444,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"0918238965\",\r\n        \"0901888484\",\r\n        \"...\"\r\n    ],\r\n    \"SmsType\": \"1\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
 					},
@@ -466,7 +466,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"8\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
+							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"Content\": \"686868\",\r\n   \"Phone\": \"0901888484\",\r\n   \"SmsType\": \"8\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
