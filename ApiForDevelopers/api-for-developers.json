@@ -260,7 +260,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\": 0,\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"{{template_type}}\",\r\n                    \"language\": \"{{language}}\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"image_url\": \"{{image_url}}\",\r\n                            \"type\": \"banner\"\r\n                        },\r\n                        {\r\n                            \"type\": \"header\",\r\n                            \"content\": \"{{content}}\",\r\n                            \"align\": \"{{align}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        },\r\n                        {\r\n                            \"type\": \"table\",\r\n                            \"content\": [\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"style\": \"{{style}}\",\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"{{value}}\",\r\n                                    \"key\": \"{{key}}\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"{{align}}\",\r\n                            \"content\": \"{{content}}\"\r\n                        }\r\n                    ],\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.open.url\",\r\n                            \"payload\": {\r\n                                \"url\": \"{{url}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.query.show\",\r\n                            \"payload\": \"{{payload}}\"\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"type\": \"oa.open.sms\",\r\n                            \"payload\": {\r\n                                \"content\": \"{{content}}\",\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"{{title}}\",\r\n                            \"image_icon\": \"{{image_icon}}\",\r\n                            \"type\": \"oa.open.phone\",\r\n                            \"payload\": {\r\n                                \"phone_code\": \"{{phone_code}}\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{user_id}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"transaction_order\",\r\n                    \"language\": \"VI\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"image_url\": \"https://minio.esms.vn/blogimg/agent-1/BlogImg/full_cccc34d4-3a46-4644-8613-1b226203c5d5.png\",\r\n                            \"type\": \"banner\"\r\n                        },\r\n                        {\r\n                            \"type\": \"header\",\r\n                            \"content\": \"Trạng thái đơn hàng\",\r\n                            \"align\": \"left\"\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"left\",\r\n                            \"content\": \"• Cảm ơn bạn đã mua hàng tại cửa hàng.<br>• Thông tin đơn hàng của bạn như sau:\"\r\n                        },\r\n                        {\r\n                            \"type\": \"table\",\r\n                            \"content\": [\r\n                                {\r\n                                    \"value\": \"eSMS-001\",\r\n                                    \"key\": \"Mã khách hàng\"\r\n                                },\r\n                                {\r\n                                    \"style\": \"yellow\",\r\n                                    \"value\": \"Đang giao\",\r\n                                    \"key\": \"Trạng thái\"\r\n                                },\r\n                                {\r\n                                    \"value\": \"250,000đ\",\r\n                                    \"key\": \"Giá tiền\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"type\": \"text\",\r\n                            \"align\": \"center\",\r\n                            \"content\": \"📲 Lưu ý điện thoại. Xin cảm ơn!\"\r\n                        }\r\n                    ],\r\n                    \"buttons\": [\r\n                        {\r\n                            \"title\": \"Kiểm tra lộ trình\",\r\n                            \"image_icon\": \"https://img.icons8.com/?size=100&id=kJlyCVWJrclv&format=png&color=000000\",\r\n                            \"type\": \"oa.open.url\",\r\n                            \"payload\": {\r\n                                \"url\": \"https://esms.vn/huong-dan/huong-dan-tich-hop/huong-dan-tich-hop-api-cua-esms-vao-website\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"Xem lại giỏ hàng\",\r\n                            \"image_icon\": \"https://img.icons8.com/?size=100&id=S2Z1vzGMFT1v&format=png&color=000000\",\r\n                            \"type\": \"oa.open.url\",\r\n                            \"payload\": {\r\n                                \"url\": \"https://esms.vn/huong-dan/huong-dan-su-dung\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"title\": \"Liên hệ tổng đài\",\r\n                            \"image_icon\": \"https://img.icons8.com/?size=100&id=KKBDB20a4V6t&format=png&color=000000\",\r\n                            \"type\": \"oa.open.phone\",\r\n                            \"payload\": {\r\n                                \"phone_code\": \"0901888484\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -287,7 +287,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"CallbackUrl\": \"{{CallbackURL}}\",\r\n    \"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{UserID}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"request_user_info\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"title\": \"{{Title}}\",\r\n                            \"subtitle\": \"{{Subtitle}}\",\r\n                            \"image_url\": \"{{ImageURL}}\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"raw": "{\r\n\"ApiKey\": \"{{ApiKey}}\",\r\n\"SecretKey\": \"{{SecretKey}}\",\r\n\"OAID\": \"{{OAID}}\",\r\n\"Payload\": {\r\n        \"recipient\": {\r\n            \"user_id\": \"{{UserID}}\"\r\n        },\r\n        \"message\": {\r\n            \"attachment\": {\r\n                \"type\": \"template\",\r\n                \"payload\": {\r\n                    \"template_type\": \"request_user_info\",\r\n                    \"elements\": [\r\n                        {\r\n                            \"title\": \"OA Chatbot\",\r\n                            \"subtitle\": \"Đang yêu cầu thông tin từ bạn\",\r\n                            \"image_url\": \"https://minio.esms.vn/blogimg/agent-1/BlogImg/full_cccc34d4-3a46-4644-8613-1b226203c5d5.png\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -295,50 +295,6 @@
 							}
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin SMS cố định giá rẻ",
-					"id": "562c21f1-e073-4352-8a24-eac62657953b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"8\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin SMS quảng cáo",
-					"id": "001e2636-af74-42d3-b25a-173b1dd1faed",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
 					},
 					"response": []
 				},
@@ -361,28 +317,6 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{Param1}}\",\r\n        \"{{Param2}}\",\r\n        \"{{Param3}}\"\r\n    ],\r\n    \"IsJourney\": true,\r\n    \"OrderId\": \"{{OrderId}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V4_post_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin Viber",
-					"id": "9a4ce369-8f02-43cb-9693-f2e9ab827af3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\r\n        \"{{Phone1}}\",\"{{Phone2}}\",\"{{Phone3}}\"\r\n    ],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
 					},
 					"response": []
 				},
@@ -469,6 +403,72 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"TimeAlive\": \"{{TimeAlive}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"MultiChannelTempId\": \"{{MultiChannelTempId}}\",\r\n    \"TypeId\": \"{{TypeId}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V5"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Viber",
+					"id": "9a4ce369-8f02-43cb-9693-f2e9ab827af3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"SmsType\": \"23\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"OttImgUrl\": \"{{OttImgUrl}}\",\r\n    \"OttLabel\": \"{{OttLabel}}\",\r\n    \"OttUrl\": \"{{OttUrl}}\",\r\n    \"Phones\": [\r\n        \"{{Phone1}}\",\"{{Phone2}}\",\"{{Phone3}}\"\r\n    ],\r\n    \"IsSandBox\": \"{{IsSandBox}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin SMS quảng cáo",
+					"id": "001e2636-af74-42d3-b25a-173b1dd1faed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{SecretKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phones\": [\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\",\r\n        \"{{Phones}}\"\r\n    ],\r\n    \"SmsType\": \"1\",\r\n    \"SendDate\": \"{{SendDate}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\":\"{{Sandbox}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Voice OTP",
+					"id": "562c21f1-e073-4352-8a24-eac62657953b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"8\",\r\n    \"IsUnicode\": {{IsUnicode}},\r\n    \"Sandbox\": {{Sandbox}},\r\n    \"campaignid\": \"{{campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"SendDate\": {{SendDate}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
 					"response": []
 				}
