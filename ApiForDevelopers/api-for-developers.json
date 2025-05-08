@@ -330,7 +330,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TimeAlive={{TimeAlive}}&NumCharOfCode={{NumCharOfCode}}&Brandname={{Brandname}}&Type=2&message={{Content}}&IsNumber={{IsNumber}}",
+							"raw": "https://rest.esms.vn/MainService.svc/json//SendMessageAutoGenCode_V4_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Type=2&Phone=0901888484&TimeAlive=2&Brandname=Baotrixemay&message={OTP} la ma xac minh dang ky Baotrixemay cua ban",
 							"protocol": "https",
 							"host": [
 								"rest",
@@ -340,13 +340,10 @@
 							"path": [
 								"MainService.svc",
 								"json",
+								"",
 								"SendMessageAutoGenCode_V4_get"
 							],
 							"query": [
-								{
-									"key": "Phone",
-									"value": "{{Phone}}"
-								},
 								{
 									"key": "ApiKey",
 									"value": "{{ApiKey}}"
@@ -356,28 +353,24 @@
 									"value": "{{SecretKey}}"
 								},
 								{
-									"key": "TimeAlive",
-									"value": "{{TimeAlive}}"
-								},
-								{
-									"key": "NumCharOfCode",
-									"value": "{{NumCharOfCode}}"
-								},
-								{
-									"key": "Brandname",
-									"value": "{{Brandname}}"
-								},
-								{
 									"key": "Type",
 									"value": "2"
 								},
 								{
-									"key": "message",
-									"value": "{{Content}}"
+									"key": "Phone",
+									"value": "0901888484"
 								},
 								{
-									"key": "IsNumber",
-									"value": "{{IsNumber}}"
+									"key": "TimeAlive",
+									"value": "2"
+								},
+								{
+									"key": "Brandname",
+									"value": "Baotrixemay"
+								},
+								{
+									"key": "message",
+									"value": "{OTP} la ma xac minh dang ky Baotrixemay cua ban"
 								}
 							]
 						}
@@ -474,6 +467,607 @@
 				}
 			],
 			"id": "e83e4c6f-df95-4d3d-b687-6b3234eeb90d"
+		},
+		{
+			"name": "Truy xuất  và đăng ký thông tin",
+			"item": [
+				{
+					"name": "Lấy thông tin số dư tài khoản",
+					"id": "571b0b39-3ce0-4102-817c-132beb05c7d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/GetBalance_json"
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra trạng thái tin nhắn theo khoảng thời gian",
+					"id": "282f1bec-d093-4c68-8f99-f4d25024e9f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": {{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\": \"{{DateTo}}\",\r\n    \"Page\": {{Page}},\r\n    \"PageSize\": {{PageSize}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra tin nhắn theo SMSID",
+					"id": "17b5d3c2-11b8-4748-ad0a-442a42d43532",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetSendStatus"
+							],
+							"query": [
+								{
+									"key": "RefId",
+									"value": "{{SMSID}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra chi tiết từng số trong tin nhắn",
+					"id": "1c1433bf-69be-4882-87d4-dd0c686f565c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetSmsReceiverStatus_get"
+							],
+							"query": [
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "RefId",
+									"value": "{{SMSID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách brandname đang active của tài khoản",
+					"id": "3133a801-03e9-4e81-8de1-ac27549fb966",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://rest.esms.vn/MainService.svc/json/GetListBrandname/{{ApiKey}}/{{SecretKey}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách template chăm sóc khách hàng",
+					"id": "ca4176c1-a1af-4d93-bf29-81cd9dc3a85c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"2\",\r\n    \"Brandname\": \"{{Brandname}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin CSKH",
+					"id": "b80773ed-fabf-49ee-bb78-c5eefe447d74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"SummaryMultipleMessage_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "Content",
+									"value": "{{Content}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "SmsType",
+									"value": "2"
+								},
+								{
+									"key": "BrandName",
+									"value": "{{BrandName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin Quảng cáo",
+					"id": "938df6e6-b2fb-45b0-a036-2852f508cf74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<RQST>\r\n<APIKEY>{{APIKEY}}</APIKEY>\r\n<SECRETKEY>{{SECRETKEY}}</SECRETKEY>\r\n<CONTENT>{{CONTENT}}</CONTENT>\r\n<SMSTYPE>1</SMSTYPE>\r\n<BRANDNAME>{{BRANDNAME}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBrandname/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách OA Zalo có trong tài khoản",
+					"id": "cb86e533-d5cc-40cd-844f-465c8cb8dc38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách template Zalo theo OAID",
+					"id": "d201e3b3-5f46-4db7-b829-2b730a29b6b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"{{OAId}}\",\r\n    \"SmsType\": \"{{SmsType}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm lấy danh sách UID có tương tác theo khoảng thời gian",
+					"id": "2f26fb8e-2b78-4bbc-89a7-d739a7c32ff7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"4097311281936189049\",\n    \"Offset\": 0,\n    \"Count\": 50,\n    \"FromDate\": \"01/09/2024\",\n    \"ToDate\": \"13/10/2024\",\n    \"IsFollower\": \"\",\n    \"TagName\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin Zalo OTT",
+					"id": "a1b040da-0c02-4e53-b1da-c14e254a197d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{value1}}\",\r\n        \"{{value2}}\",\r\n        \"{{value3}}\"\r\n    ],\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy Qouta tin ZaloOTT theo OAID",
+					"id": "f7a3f3f8-3bb2-4b53-af42-66afe6966a69",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách đánh giá theo OAID và templateID",
+					"id": "c36498c6-2153-494c-9795-36c85330aa33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\": \"{{Offset}}\",\r\n    \"Limit\": \"{{Limit}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra chất lượng OA",
+					"id": "b03f9576-0e10-4061-bdd0-4cecc82ef6c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách Zalo Followers theo OAID",
+					"id": "eff6317f-9595-43ed-9950-102dc8b5c95e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Offset\": {{Offset}},\r\n    \"Count\": {{Count}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin callback tin Zalo",
+					"id": "eb870a67-0f33-444d-85e5-bbabf920299d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
+						},
+						"url": "https://status-sms.esms.vn/ZaloCallback/GetCallback"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin chi tiết template Zalo",
+					"id": "43e884e9-36a4-4272-94bd-c388551e7c60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo?TemplateId={{TemplateId}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&OAId={{OAId}}",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"GetZnsTemplateInfo"
+							],
+							"query": [
+								{
+									"key": "TemplateId",
+									"value": "{{TemplateId}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "OAId",
+									"value": "{{OAId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng ký mua gói OA",
+					"id": "f6fc7a5b-a326-4e4b-b7b1-0023151354f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Dateactive\":\"{{Dateactive}}\",\r\n    \"Duaration\":\"{{Duaration}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"Package\":{{Package}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/RegisOAPackageJson/"
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng ký template Zalo",
+					"id": "f25701ff-8ce7-4c5d-bca6-c7eafd158977",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Content\":\"{{Content}}\",\r\n    \"ImageUrl\":\"{{ImageUrl}}\",\r\n    \"CTA1\":\"{{CTA1}}\",\r\n    \"CTA2\":\"{{CTA2}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"SmsType\":\"{{SmsType}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/"
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng ký template Chăm sóc khách hàng",
+					"id": "12f5e80f-025c-4c9c-9c9c-b42622ea8af2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"AssetsUrl\": \"{{AssetsUrl}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"{{IsUnicode}}\",\r\n    \"CustomerEmail\": \"{{CustomerEmail}}\",\r\n    \"CustomerName\": \"{{CustomerName}}\",\r\n    \"CustomerPhone\": \"{{CustomerPhone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ServiceType\": 2,\r\n    \"SmsType\": {{SmsType}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/"
+					},
+					"response": []
+				},
+				{
+					"name": "Check code tin Gencode",
+					"id": "5e58c22f-dd3e-4dfd-8921-f794bf1873f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
+							}
+						],
+						"url": {
+							"raw": "http://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Code={{Code}}",
+							"protocol": "http",
+							"host": [
+								"rest",
+								"esms",
+								"vn"
+							],
+							"path": [
+								"MainService.svc",
+								"json",
+								"CheckCodeGen_V4_get"
+							],
+							"query": [
+								{
+									"key": "Phone",
+									"value": "{{Phone}}"
+								},
+								{
+									"key": "ApiKey",
+									"value": "{{ApiKey}}"
+								},
+								{
+									"key": "SecretKey",
+									"value": "{{SecretKey}}"
+								},
+								{
+									"key": "Code",
+									"value": "{{Code}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "97f5f452-1e2e-4ef4-880d-a9236736f493"
 		},
 		{
 			"name": "Các API khác",
@@ -1503,607 +2097,6 @@
 				}
 			],
 			"id": "97dc89c5-cc40-4a4d-a064-15c0e53aa460"
-		},
-		{
-			"name": "Truy xuất  và đăng ký thông tin",
-			"item": [
-				{
-					"name": "Lấy thông tin số dư tài khoản",
-					"id": "571b0b39-3ce0-4102-817c-132beb05c7d8",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/GetBalance_json"
-					},
-					"response": []
-				},
-				{
-					"name": "Kiểm tra trạng thái tin nhắn theo khoảng thời gian",
-					"id": "282f1bec-d093-4c68-8f99-f4d25024e9f8",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": {{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\": \"{{DateTo}}\",\r\n    \"Page\": {{Page}},\r\n    \"PageSize\": {{PageSize}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
-					},
-					"response": []
-				},
-				{
-					"name": "Kiểm tra tin nhắn theo SMSID",
-					"id": "17b5d3c2-11b8-4748-ad0a-442a42d43532",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
-							"protocol": "https",
-							"host": [
-								"rest",
-								"esms",
-								"vn"
-							],
-							"path": [
-								"MainService.svc",
-								"json",
-								"GetSendStatus"
-							],
-							"query": [
-								{
-									"key": "RefId",
-									"value": "{{SMSID}}"
-								},
-								{
-									"key": "ApiKey",
-									"value": "{{ApiKey}}"
-								},
-								{
-									"key": "SecretKey",
-									"value": "{{SecretKey}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Kiểm tra chi tiết từng số trong tin nhắn",
-					"id": "1c1433bf-69be-4882-87d4-dd0c686f565c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}",
-							"protocol": "https",
-							"host": [
-								"rest",
-								"esms",
-								"vn"
-							],
-							"path": [
-								"MainService.svc",
-								"json",
-								"GetSmsReceiverStatus_get"
-							],
-							"query": [
-								{
-									"key": "ApiKey",
-									"value": "{{ApiKey}}"
-								},
-								{
-									"key": "SecretKey",
-									"value": "{{SecretKey}}"
-								},
-								{
-									"key": "RefId",
-									"value": "{{SMSID}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách brandname đang active của tài khoản",
-					"id": "3133a801-03e9-4e81-8de1-ac27549fb966",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "https://rest.esms.vn/MainService.svc/json/GetListBrandname/{{ApiKey}}/{{SecretKey}}"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách template chăm sóc khách hàng",
-					"id": "ca4176c1-a1af-4d93-bf29-81cd9dc3a85c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"2\",\r\n    \"Brandname\": \"{{Brandname}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
-					},
-					"response": []
-				},
-				{
-					"name": "Hàm tạm tính giá tin CSKH",
-					"id": "b80773ed-fabf-49ee-bb78-c5eefe447d74",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}",
-							"protocol": "https",
-							"host": [
-								"rest",
-								"esms",
-								"vn"
-							],
-							"path": [
-								"MainService.svc",
-								"json",
-								"SummaryMultipleMessage_V4_get"
-							],
-							"query": [
-								{
-									"key": "Phone",
-									"value": "{{Phone}}"
-								},
-								{
-									"key": "Content",
-									"value": "{{Content}}"
-								},
-								{
-									"key": "ApiKey",
-									"value": "{{ApiKey}}"
-								},
-								{
-									"key": "SecretKey",
-									"value": "{{SecretKey}}"
-								},
-								{
-									"key": "SmsType",
-									"value": "2"
-								},
-								{
-									"key": "BrandName",
-									"value": "{{BrandName}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Hàm tạm tính giá tin Quảng cáo",
-					"id": "938df6e6-b2fb-45b0-a036-2852f508cf74",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "text/plain"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<RQST>\r\n<APIKEY>{{APIKEY}}</APIKEY>\r\n<SECRETKEY>{{SECRETKEY}}</SECRETKEY>\r\n<CONTENT>{{CONTENT}}</CONTENT>\r\n<SMSTYPE>1</SMSTYPE>\r\n<BRANDNAME>{{BRANDNAME}}</BRANDNAME>\r\n<CONTACTS>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>\r\n</CONTACTS>\r\n</RQST>"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBrandname/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách OA Zalo có trong tài khoản",
-					"id": "cb86e533-d5cc-40cd-844f-465c8cb8dc38",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách template Zalo theo OAID",
-					"id": "d201e3b3-5f46-4db7-b829-2b730a29b6b4",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"{{OAId}}\",\r\n    \"SmsType\": \"{{SmsType}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
-					},
-					"response": []
-				},
-				{
-					"name": "Hàm lấy danh sách UID có tương tác theo khoảng thời gian",
-					"id": "2f26fb8e-2b78-4bbc-89a7-d739a7c32ff7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"4097311281936189049\",\n    \"Offset\": 0,\n    \"Count\": 50,\n    \"FromDate\": \"01/09/2024\",\n    \"ToDate\": \"13/10/2024\",\n    \"IsFollower\": \"\",\n    \"TagName\": \"\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
-					},
-					"response": []
-				},
-				{
-					"name": "Hàm tạm tính giá tin Zalo OTT",
-					"id": "a1b040da-0c02-4e53-b1da-c14e254a197d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{value1}}\",\r\n        \"{{value2}}\",\r\n        \"{{value3}}\"\r\n    ],\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy Qouta tin ZaloOTT theo OAID",
-					"id": "f7a3f3f8-3bb2-4b53-af42-66afe6966a69",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách đánh giá theo OAID và templateID",
-					"id": "c36498c6-2153-494c-9795-36c85330aa33",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\": \"{{Offset}}\",\r\n    \"Limit\": \"{{Limit}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
-					},
-					"response": []
-				},
-				{
-					"name": "Kiểm tra chất lượng OA",
-					"id": "b03f9576-0e10-4061-bdd0-4cecc82ef6c5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách Zalo Followers theo OAID",
-					"id": "eff6317f-9595-43ed-9950-102dc8b5c95e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Offset\": {{Offset}},\r\n    \"Count\": {{Count}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy thông tin callback tin Zalo",
-					"id": "eb870a67-0f33-444d-85e5-bbabf920299d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
-						},
-						"url": "https://status-sms.esms.vn/ZaloCallback/GetCallback"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy thông tin chi tiết template Zalo",
-					"id": "43e884e9-36a4-4272-94bd-c388551e7c60",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo?TemplateId={{TemplateId}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&OAId={{OAId}}",
-							"protocol": "https",
-							"host": [
-								"rest",
-								"esms",
-								"vn"
-							],
-							"path": [
-								"MainService.svc",
-								"json",
-								"GetZnsTemplateInfo"
-							],
-							"query": [
-								{
-									"key": "TemplateId",
-									"value": "{{TemplateId}}"
-								},
-								{
-									"key": "ApiKey",
-									"value": "{{ApiKey}}"
-								},
-								{
-									"key": "SecretKey",
-									"value": "{{SecretKey}}"
-								},
-								{
-									"key": "OAId",
-									"value": "{{OAId}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Đăng ký mua gói OA",
-					"id": "f6fc7a5b-a326-4e4b-b7b1-0023151354f0",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Dateactive\":\"{{Dateactive}}\",\r\n    \"Duaration\":\"{{Duaration}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"Package\":{{Package}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/RegisOAPackageJson/"
-					},
-					"response": []
-				},
-				{
-					"name": "Đăng ký template Zalo",
-					"id": "f25701ff-8ce7-4c5d-bca6-c7eafd158977",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\":\"{{ApiKey}}\",\r\n    \"SecretKey\":\"{{SecretKey}}\",\r\n    \"Content\":\"{{Content}}\",\r\n    \"ImageUrl\":\"{{ImageUrl}}\",\r\n    \"CTA1\":\"{{CTA1}}\",\r\n    \"CTA2\":\"{{CTA2}}\",\r\n    \"OAID\":\"{{OAID}}\",\r\n    \"SmsType\":\"{{SmsType}}\",\r\n    \"CallbackUrl\":\"{{CallbackUrl}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/"
-					},
-					"response": []
-				},
-				{
-					"name": "Đăng ký template Chăm sóc khách hàng",
-					"id": "12f5e80f-025c-4c9c-9c9c-b42622ea8af2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"AssetsUrl\": \"{{AssetsUrl}}\",\r\n    \"Brandname\": \"{{Brandname}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Content\": \"{{Content}}\",\r\n    \"IsUnicode\": \"{{IsUnicode}}\",\r\n    \"CustomerEmail\": \"{{CustomerEmail}}\",\r\n    \"CustomerName\": \"{{CustomerName}}\",\r\n    \"CustomerPhone\": \"{{CustomerPhone}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ServiceType\": 2,\r\n    \"SmsType\": {{SmsType}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/"
-					},
-					"response": []
-				},
-				{
-					"name": "Check code tin Gencode",
-					"id": "5e58c22f-dd3e-4dfd-8921-f794bf1873f5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
-							}
-						],
-						"url": {
-							"raw": "http://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Code={{Code}}",
-							"protocol": "http",
-							"host": [
-								"rest",
-								"esms",
-								"vn"
-							],
-							"path": [
-								"MainService.svc",
-								"json",
-								"CheckCodeGen_V4_get"
-							],
-							"query": [
-								{
-									"key": "Phone",
-									"value": "{{Phone}}"
-								},
-								{
-									"key": "ApiKey",
-									"value": "{{ApiKey}}"
-								},
-								{
-									"key": "SecretKey",
-									"value": "{{SecretKey}}"
-								},
-								{
-									"key": "Code",
-									"value": "{{Code}}"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "97f5f452-1e2e-4ef4-880d-a9236736f493"
 		},
 		{
 			"name": "Voice",
