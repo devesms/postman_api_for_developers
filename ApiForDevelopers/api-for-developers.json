@@ -120,7 +120,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"849018884xx\",\r\n    \"HashPhone\": \"{{SHA-256(phone)}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"TempData\": {\r\n        \"{{key1}}\": \"{{value1}}\",\r\n        \"{{key2}}\": \"{{value2}}\"\r\n    },\r\n    \"campaignid\": \"{{Campaignid}}\",\r\n    \"RequestId\": \"{{RequestId}}\",\r\n    \"CallbackUrl\": \"{{CallbackUrl}}\",\r\n    \"Sandbox\": \"{{Sandbox}}\"\r\n}",
+							"raw": "{\r\n    \"ApiKey\": \"APIKEYCUABAN\",\r\n    \"SecretKey\": \"SECRETKEYCUABAN\",\r\n    \"OAID\": \"4097311281936189049\",\r\n    \"HashPhone\": \"475dee020cb340c58b059ba9ff5e4cf75444f49cce993283b5f6bcaa5b27f8cf\",\r\n    \"TempData\": {\r\n        \"customer_name\": \"Đinh Thái Hà\",\r\n        \"order_code\": \"HD00001\",\r\n        \"address\": \"140-142 Đường Số 1, KDC Vạn Phúc, Hiệp Bình Phước, Thủ Đức\",\r\n        \"phone\": \"0901888484\",\r\n        \"email\": \"dinhthaiha@vihatgroup.com\",\r\n        \"product_name\": \"Gói duy trì OA Zalo Premium 1 năm\",\r\n        \"quantity\": \"1\",\r\n        \"payment_amount\": \"4308000\",\r\n        \"delivery_date\": \"01/08/2024\"\r\n    },\r\n    \"TempID\": \"200607\",\r\n    \"campaignid\": \"Xác nhận mua hàng\",\r\n    \"RequestId\": \"96accf59-0c41-4bc7-a5c4-4a466c2e41c2\",\r\n    \"CallbackUrl\": \"https://esms.vn/webhook/\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -466,7 +466,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"ApiKey\": \"{{ApiKey}}\",\r\n   \"SecretKey\": \"{{SecretKey}}\",\r\n   \"Content\": \"686868\",\r\n   \"Phone\": \"0901888484\",\r\n   \"SmsType\": \"8\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Content\": \"686868\",\r\n    \"Phone\": \"0901888484\",\r\n    \"SmsType\": \"8\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
