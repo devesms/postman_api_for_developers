@@ -793,7 +793,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy danh sách đánh giá theo OAID và templateID",
+					"name": "Hàm lấy thông tin đánh giá của khách hàng",
 					"id": "c36498c6-2153-494c-9795-36c85330aa33",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -808,9 +808,31 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\": \"{{Offset}}\",\r\n    \"Limit\": \"{{Limit}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"4097311281936189049\",\r\n    \"TemplateID\": \"266986\",\r\n    \"FromTime\": \"2024-07-28 00:00:00\",\r\n    \"ToTime\": \"2024-07-30 23:59:59\",\r\n    \"Offset\": \"0\",\r\n    \"Limit\": \"50\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm kiểm tra chất lượng OA",
+					"id": "b03f9576-0e10-4061-bdd0-4cecc82ef6c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"4097311281936189049\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
 					},
 					"response": []
 				},
@@ -838,28 +860,6 @@
 							}
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
-					},
-					"response": []
-				},
-				{
-					"name": "Kiểm tra chất lượng OA",
-					"id": "b03f9576-0e10-4061-bdd0-4cecc82ef6c5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/"
 					},
 					"response": []
 				},
