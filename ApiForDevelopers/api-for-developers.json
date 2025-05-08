@@ -727,7 +727,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy danh sách template Zalo theo OAID",
+					"name": "Lấy danh sách template Zalo",
 					"id": "d201e3b3-5f46-4db7-b829-2b730a29b6b4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -745,6 +745,28 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"{{OAId}}\",\r\n    \"SmsType\": \"{{SmsType}}\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
+					},
+					"response": []
+				},
+				{
+					"name": "Hàm tạm tính giá tin Zalo OTT",
+					"id": "a1b040da-0c02-4e53-b1da-c14e254a197d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"0901888484\",\r\n    \"Params\": [\r\n        \"Anh\",\r\n        \"2506007899\",\r\n        \"02/05/2024\",\r\n        \"360.000\"\r\n    ],\r\n    \"TempID\": \"200975\",\r\n    \"OAID\": \"4097311281936189049\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
 					},
 					"response": []
 				},
@@ -772,28 +794,6 @@
 							}
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
-					},
-					"response": []
-				},
-				{
-					"name": "Hàm tạm tính giá tin Zalo OTT",
-					"id": "a1b040da-0c02-4e53-b1da-c14e254a197d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"{{Phone}}\",\r\n    \"Params\": [\r\n        \"{{value1}}\",\r\n        \"{{value2}}\",\r\n        \"{{value3}}\"\r\n    ],\r\n    \"TempID\": \"{{TempID}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
 					},
 					"response": []
 				},
