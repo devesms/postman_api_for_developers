@@ -742,14 +742,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"{{OAId}}\",\r\n    \"SmsType\": \"{{SmsType}}\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAId\": \"4097311281936189049\",\r\n    \"SmsType\": \"24\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetTemplate/"
 					},
 					"response": []
 				},
 				{
-					"name": "Hàm tạm tính giá tin Zalo OTT",
+					"name": "Hàm tạm tính giá tin Zalo",
 					"id": "a1b040da-0c02-4e53-b1da-c14e254a197d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -767,6 +767,50 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"Phone\": \"0901888484\",\r\n    \"Params\": [\r\n        \"Anh\",\r\n        \"2506007899\",\r\n        \"02/05/2024\",\r\n        \"360.000\"\r\n    ],\r\n    \"TempID\": \"200975\",\r\n    \"OAID\": \"4097311281936189049\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy Qouta tin ZaloOTT theo OAID",
+					"id": "f7a3f3f8-3bb2-4b53-af42-66afe6966a69",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"4097311281936189049\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách đánh giá theo OAID và templateID",
+					"id": "c36498c6-2153-494c-9795-36c85330aa33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\": \"{{Offset}}\",\r\n    \"Limit\": \"{{Limit}}\"\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
 					},
 					"response": []
 				},
@@ -794,50 +838,6 @@
 							}
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/QueryListUID/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy Qouta tin ZaloOTT theo OAID",
-					"id": "f7a3f3f8-3bb2-4b53-af42-66afe6966a69",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetQuota/"
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách đánh giá theo OAID và templateID",
-					"id": "c36498c6-2153-494c-9795-36c85330aa33",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"TemplateID\": \"{{TemplateID}}\",\r\n    \"FromTime\": \"{{FromTime}}\",\r\n    \"ToTime\": \"{{ToTime}}\",\r\n    \"Offset\": \"{{Offset}}\",\r\n    \"Limit\": \"{{Limit}}\"\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/"
 					},
 					"response": []
 				},
