@@ -509,7 +509,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": {{SmsType}},\r\n    \"From\": \"{{DateFrom}}\",\r\n    \"To\": \"{{DateTo}}\",\r\n    \"Page\": {{Page}},\r\n    \"PageSize\": {{PageSize}}\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"SmsType\": \"2\",\r\n    \"From\": \"2025-01-01 06:00:00\",\r\n    \"To\": \"2025-01-02 18:00:00\",\r\n    \"Page\": 1,\r\n    \"PageSize\": 500\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2"
 					},
@@ -525,7 +525,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId=6007b4bc6db546b194062c19620cc820200&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}",
 							"protocol": "https",
 							"host": [
 								"rest",
@@ -540,7 +540,7 @@
 							"query": [
 								{
 									"key": "RefId",
-									"value": "{{SMSID}}"
+									"value": "6007b4bc6db546b194062c19620cc820200"
 								},
 								{
 									"key": "ApiKey",
@@ -565,7 +565,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}",
+							"raw": "https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId=1e8caf001e494a9b873cc70535ad8b15",
 							"protocol": "https",
 							"host": [
 								"rest",
@@ -588,7 +588,7 @@
 								},
 								{
 									"key": "RefId",
-									"value": "{{SMSID}}"
+									"value": "1e8caf001e494a9b873cc70535ad8b15"
 								}
 							]
 						}
