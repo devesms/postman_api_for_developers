@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "bb5510b5-d1b0-49ee-8c94-ce718d5e5d0e",
 		"name": "Api for Developers",
-		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -24,7 +24,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"ApiKey\": \"APIKEYCUABAN\",\r\n   \"Content\": \"CODE la ma xac minh dang ky Baotrixemay cua ban\",\r\n   \"Phone\": \"0901888484\",\r\n   \"SecretKey\": \"SECRETKEYCUABAN\",\r\n   \"Brandname\": \"Baotrixemay\",\r\n   \"SmsType\": \"2\",\r\n   \"IsUnicode\": \"0\",\r\n   \"campaignid\": \"Cảm ơn sau mua hàng tháng 7\",\r\n   \"RequestId\": \"c82cd356-bf49-4113-9466-65a7f6359c96\",\r\n   \"CallbackUrl\": \"https://esms.vn/webhook/\"\r\n}"
+							"raw": "{\r\n    \"ApiKey\": \"APIKEYCUABAN\",\r\n    \"Content\": \"CODE la ma xac minh dang ky Baotrixemay cua ban\",\r\n    \"Phone\": \"0901888484\",\r\n    \"SecretKey\": \"SECRETKEYCUABAN\",\r\n    \"Brandname\": \"Baotrixemay\",\r\n    \"SmsType\": \"2\",\r\n    \"IsUnicode\": \"0\",\r\n    \"campaignid\": \"Cảm ơn sau mua hàng tháng 7\",\r\n    \"RequestId\": \"c82cd356-bf49-4113-9466-65a7f6359c96\",\r\n    \"CallbackUrl\": \"https://esms.vn/webhook/\"\r\n}"
 						},
 						"url": "https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/"
 					},
