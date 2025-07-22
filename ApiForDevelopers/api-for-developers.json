@@ -38,17 +38,22 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"APIKEYCUABAN\",\r\n    \"SecretKey\": \"SECRETKEYCUABAN\",\r\n    \"OAID\": \"4097311281936189049\",\r\n    \"Phone\": \"0901888484\",\r\n    \"TempData\": {\r\n        \"customer_name\": \"Đinh Thái Hà\",\r\n        \"order_code\": \"HD00001\",\r\n        \"address\": \"140-142 Đường Số 1, KDC Vạn Phúc, Hiệp Bình Phước, Thủ Đức\",\r\n        \"phone\": \"0901888484\",\r\n        \"email\": \"dinhthaiha@vihatgroup.com\",\r\n        \"product_name\": \"Gói duy trì OA Zalo Premium 1 năm\",\r\n        \"quantity\": \"1\",\r\n        \"payment_amount\": \"4308000\",\r\n        \"delivery_date\": \"01/08/2024\"\r\n    },\r\n    \"TempID\": \"200607\",\r\n    \"campaignid\": \"Xác nhận mua hàng\",\r\n    \"RequestId\": \"96accf59-0c41-4bc7-a5c4-4a466c2e41c2\",\r\n    \"CallbackUrl\": \"https://esms.vn/webhook/\"\r\n}",
+							"raw": "{\n    \"ApiKey\": \"APIKEYCUABAN\",\n    \"SecretKey\": \"SECRETKEYCUABAN\",\n    \"OAID\": \"4097311281936189049\",\n    \"Phone\": \"0901888484\",\n    \"TempData\": {\n        \"customer_name\": \"Đinh Thái Hà\",\n        \"order_code\": \"HD00001\",\n        \"address\": \"140-142 Đường Số 1, KDC Vạn Phúc, Hiệp Bình Phước, Thủ Đức\",\n        \"phone\": \"0901888484\",\n        \"email\": \"dinhthaiha@vihatgroup.com\",\n        \"product_name\": \"Gói duy trì OA Zalo Premium 1 năm\",\n        \"quantity\": \"1\",\n        \"payment_amount\": \"4308000\",\n        \"delivery_date\": \"01/08/2024\"\n    },\n    \"TempID\":  \"200607\",\n    \"SendingMode\":\"1\",\n    \"campaignid\":  \"Xác nhận mua hàng\",\n    \"RequestId\": \"96accf59-0c41-4bc7-a5c4-4a466c2e41c2\",\n    \"CallbackUrl\": \"https://esms.vn/webhook/\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/"
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/"
 					},
 					"response": []
 				},
@@ -129,28 +134,6 @@
 						},
 						"url": "https://rest.esms.vn//MainService.svc/json/SendZaloMessage_V6/hash_phone/",
 						"description": "### Send Zalo Message\n\nThis endpoint allows you to send a Zalo message using the provided payload.\n\n#### Request Body\n\n- `ApiKey` (text, required): The API key for authentication.\n    \n- `SecretKey` (text, required): The secret key for authentication.\n    \n- `Phone` (text, required): The phone number to which the Zalo message will be sent.\n    \n- `HashPhone` (text, required): The SHA-256 hash of the phone number.\n    \n- `OAID` (text, required): The OAID for the Zalo message.\n    \n- `TempID` (text, required): The template ID for the Zalo message.\n    \n- `TempData` (object, required): The template data with key-value pairs.\n    \n- `campaignid` (text, required): The campaign ID for tracking purposes.\n    \n- `RequestId` (text, required): The unique ID for the request.\n    \n- `CallbackUrl` (text, required): The URL to which the callback response will be sent.\n    \n- `Sandbox` (text, required): Indicates if the request is in sandbox mode.\n    \n"
-					},
-					"response": []
-				},
-				{
-					"name": "Tin Zalo mỗi khách hàng một nội dung",
-					"id": "1f75d02b-c622-4de4-aedc-dd9d4c2b16ea",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"campaignid\": \"Chiến dịch 1\",\r\n    \"OAID\": \"4097311281936189049\",\r\n    \"TempID\": \"267247\",\r\n    \"Sandbox\": \"0\",\r\n    \"CallbackUrl\": \"https://esms.vn/webhook/\",\r\n    \"Data\": [\r\n        {\r\n            \"Phone\": \"0901888484\",\r\n            \"RequestId\": \"96accf59-0c41-4bc7-a5c1\",\r\n            \"Params\": [ \"Chị A\", \"Gội đầu\", \"KH001\", \"19/03/2025\" ]\r\n        },\r\n        {\r\n            \"Phone\": \"0918238965\",\r\n            \"RequestId\": \"96accf59-0c41-4bc7-a5c2\",\r\n            \"Params\": [ \"Chị B\", \"Uốn\", \"KH002\", \"19/03/2025\" ]\r\n        },\r\n        {\r\n            \"Phone\": \"0765418062\",\r\n            \"RequestId\": \"96accf59-0c41-4bc7-a5c3\",\r\n            \"Params\": [ \"Chị C\", \"Nhuộm\", \"KH003\", \"19/03/2025\" ]\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/"
 					},
 					"response": []
 				},
@@ -864,28 +847,6 @@
 					"response": []
 				},
 				{
-					"name": "Lấy danh sách Zalo Followers theo OAID",
-					"id": "eff6317f-9595-43ed-9950-102dc8b5c95e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Offset\": {{Offset}},\r\n    \"Count\": {{Count}}\r\n}"
-						},
-						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
-					},
-					"response": []
-				},
-				{
 					"name": "Lấy thông tin callback tin Zalo",
 					"id": "eb870a67-0f33-444d-85e5-bbabf920299d",
 					"protocolProfileBehavior": {
@@ -904,6 +865,28 @@
 							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"ListRefid\": [\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\",\r\n        \"{{Refid}}\"\r\n    ],\r\n    \"OAId\": \"{{OAId}}\"\r\n}"
 						},
 						"url": "https://status-sms.esms.vn/ZaloCallback/GetCallback"
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách Zalo Followers theo OAID",
+					"id": "eff6317f-9595-43ed-9950-102dc8b5c95e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"Offset\": {{Offset}},\r\n    \"Count\": {{Count}}\r\n}"
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/"
 					},
 					"response": []
 				},
@@ -1521,6 +1504,28 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tin Zalo mỗi khách hàng một nội dung",
+					"id": "1f75d02b-c622-4de4-aedc-dd9d4c2b16ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"campaignid\": \"Chiến dịch 1\",\r\n    \"OAID\": \"4097311281936189049\",\r\n    \"TempID\": \"267247\",\r\n    \"Sandbox\": \"0\",\r\n    \"CallbackUrl\": \"https://esms.vn/webhook/\",\r\n    \"Data\": [\r\n        {\r\n            \"Phone\": \"0901888484\",\r\n            \"RequestId\": \"96accf59-0c41-4bc7-a5c1\",\r\n            \"Params\": [ \"Chị A\", \"Gội đầu\", \"KH001\", \"19/03/2025\" ]\r\n        },\r\n        {\r\n            \"Phone\": \"0918238965\",\r\n            \"RequestId\": \"96accf59-0c41-4bc7-a5c2\",\r\n            \"Params\": [ \"Chị B\", \"Uốn\", \"KH002\", \"19/03/2025\" ]\r\n        },\r\n        {\r\n            \"Phone\": \"0765418062\",\r\n            \"RequestId\": \"96accf59-0c41-4bc7-a5c3\",\r\n            \"Params\": [ \"Chị C\", \"Nhuộm\", \"KH003\", \"19/03/2025\" ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/"
 					},
 					"response": []
 				}
