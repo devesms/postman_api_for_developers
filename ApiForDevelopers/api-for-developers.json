@@ -1048,6 +1048,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Hàm lấy thông tin trạng thái ZNS",
+					"id": "cab8ca81-d83a-46e5-ab19-b58f29a6f656",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "ASP.NET_SessionId=nsvdja0b4rcfjf1o4szjxno0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApiKey\": \"{{ApiKey}}\",\r\n    \"SecretKey\": \"{{SecretKey}}\",\r\n    \"OAID\": \"{{OAID}}\",\r\n    \"MessageId\": \"{{MessageId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus"
+					},
+					"response": []
 				}
 			],
 			"id": "97f5f452-1e2e-4ef4-880d-a9236736f493"
@@ -2318,34 +2345,6 @@
 				}
 			],
 			"id": "f8d106e3-878e-420a-89c3-066514f9478d"
-		},
-		{
-			"name": "Hàm lấy thông tin trạng thái ZNS",
-			"id": "d94d2be4-fcba-479a-ac7e-181856ec45bb",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"{{OAID}}\",\n    \"MessageId\": \"{{MessageId}}\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus",
-				"description": "Generated from cURL: curl --location 'http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"ApiKey\": \"{{ApiKey}}\",\n    \"SecretKey\": \"{{SecretKey}}\",\n    \"OAID\": \"{{OAID}}\",\n    \"MessageId\": \"{{MessageId}}\"\n}'"
-			},
-			"response": []
 		}
 	]
 }
