@@ -58,6 +58,36 @@
 					"response": []
 				},
 				{
+					"name": "Tin nhắn Zalo gửi bằng UID",
+					"id": "e87c19af-0679-40bc-9ec5-d369800be08d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApiKey\": \"APIKEYCUABAN\",\n    \"SecretKey\": \"SECRETKEYCUABAN\",\n    \"OAID\": \"4097311281936189049\",\n    \"Phone\": \"0901888484\",\n    \"TempData\": {\n        \"customer_name\": \"Đinh Thái Hà\",\n        \"order_code\": \"HD00001\",\n        \"address\": \"140-142 Đường Số 1, KDC Vạn Phúc, Hiệp Bình Phước, Thủ Đức\",\n        \"phone\": \"0901888484\",\n        \"email\": \"dinhthaiha@vihatgroup.com\",\n        \"product_name\": \"Gói duy trì OA Zalo Premium 1 năm\",\n        \"quantity\": \"1\",\n        \"payment_amount\": \"4308000\",\n        \"delivery_date\": \"01/08/2024\"\n    },\n    \"TempID\":  \"200607\",\n    \"campaignid\":  \"Xác nhận mua hàng\",\n    \"RequestId\": \"96accf59-0c41-4bc7-a5c4-4a466c2e41c2\",\n    \"CallbackUrl\": \"https://esms.vn/webhook/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/zalo_uid/"
+					},
+					"response": []
+				},
+				{
 					"name": "Tin nhắn đa kênh: Zalo => SMS OTP/CSKH",
 					"id": "621e424e-1e47-4215-8d8a-21ef56f017b9",
 					"protocolProfileBehavior": {
